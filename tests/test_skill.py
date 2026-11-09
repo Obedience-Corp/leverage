@@ -175,6 +175,18 @@ class BootstrapTests(unittest.TestCase):
 
 
 class ReportTests(unittest.TestCase):
+    def test_installable_directory_excludes_repository_examples_and_reports(self):
+        runtime = {'SKILL.md', 'agents', 'assets', 'references', 'scripts'}
+        self.assertEqual({p.name for p in SKILL.iterdir()}, runtime)
+        self.assertTrue((SOURCE/'examples').is_dir())
+        self.assertTrue((SOURCE/'reports').is_dir())
+        for name in ('examples', 'reports', 'tests', 'out'):
+            self.assertFalse((SKILL/name).exists())
+        self.assertFalse((SKILL/'scripts/archive_report.py').exists())
+        self.assertFalse((SKILL/'scripts/check_reports.py').exists())
+        for path in SKILL.rglob('*'):
+            self.assertTrue(path.resolve().is_relative_to(SKILL.resolve()))
+
     def test_exact_accounting_and_portable_data(self):
         repo, authors = fixture()
         data = normalize(repo, authors)
@@ -301,6 +313,85 @@ class ReportTests(unittest.TestCase):
             self.assertTrue((SKILL/link).is_file(), link)
         for script in ('collect.py', 'render.py', 'ensure-festival.sh'):
             self.assertTrue((SKILL/'scripts'/script).is_file())
+
+
+class ArchiveTests(unittest.TestCase):
+    def modules(self):
+        modules = []
+        for name in ('archive_report', 'check_reports'):
+            spec = importlib.util.spec_from_file_location(name, SOURCE/'scripts'/f'{name}.py')
+            module = importlib.util.module_from_spec(spec)
+            sys.modules[name] = module
+            spec.loader.exec_module(module)
+            modules.append(module)
+        return modules
+
+    def inputs(self, root):
+        repo, authors = fixture()
+        authors['history_method'] = {'id': 'fixture', 'refs': 'all_local_refs'}
+        paths = []
+        for name, value in (('repository', repo), ('contributors', authors)):
+            path = root/f'{name}.json'
+            path.write_text(json.dumps(value))
+            paths.append(path)
+        return paths
+
+    def test_archive_preserves_exact_measurements_and_rejects_overwrite_or_tampering(self):
+        archive, checker = self.modules()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            inputs = self.inputs(root)
+            output = root/'archive'
+            original = [p.read_bytes() for p in inputs]
+            data = archive.archive(*inputs, 'https://github.com/example/project', '2025-06-15T12:00:00Z', output)
+            self.assertEqual(data, json.loads((output/'data/snapshot.json').read_text()))
+            self.assertEqual([p.read_bytes() for p in inputs], original)
+            checker.check_archive(output)
+            with self.assertRaisesRegex(ValueError, 'already exists'):
+                archive.archive(*inputs, 'https://github.com/example/project', '2025-06-15T12:00:00Z', output)
+            self.assertEqual(data['summary']['estimated_person_months'], 10)
+            csv_path = output/'data/contributors.csv'
+            csv_path.write_text(csv_path.read_text().replace('800,', '801,'))
+            with self.assertRaisesRegex(ValueError, 'Artifact changed'):
+                checker.check_archive(output)
+
+    def test_unmatched_scope_override_is_rejected_before_writing(self):
+        archive, _ = self.modules()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            inputs = self.inputs(root)
+            override = root/'.sccignore'
+            override.write_text('vendor/\n')
+            with self.assertRaisesRegex(ValueError, 'does not match'):
+                archive.archive(*inputs, 'https://github.com/example/project', '2025-06-15T12:00:00Z', root/'archive', override)
+            self.assertFalse((root/'archive').exists())
+
+    def test_checked_in_real_reports_reconcile_and_are_portable(self):
+        _, checker = self.modules()
+        sources = list((SOURCE/'reports').glob('*/*/source.json'))
+        self.assertTrue(sources)
+        for source in sources:
+            with self.subTest(report=str(source.parent)):
+                checker.check_archive(source.parent)
+
+    def test_ref_manifest_must_match_the_measured_fingerprint(self):
+        archive, checker = self.modules()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            inputs = self.inputs(root)
+            refs = root/'refs.txt'
+            refs.write_text('refs/heads/main ' + 'a'*40 + '\n')
+            with self.assertRaisesRegex(ValueError, 'Ref manifest differs'):
+                archive.archive(*inputs, 'https://github.com/example/project', '2025-06-15T12:00:00Z', root/'bad', refs_file=refs)
+            self.assertFalse((root/'bad').exists())
+            for path in inputs:
+                value = json.loads(path.read_text())
+                scope = value['report']['scope'] if 'report' in value else value['projects'][0]
+                scope['refs_digest'] = archive.refs_digest(refs.read_text())
+                path.write_text(json.dumps(value))
+            archive.archive(*inputs, 'https://github.com/example/project', '2025-06-15T12:00:00Z', root/'good', refs_file=refs)
+            checker.check_archive(root/'good')
+            self.assertEqual((root/'good/refs.txt').read_bytes(), refs.read_bytes())
 
 
 if __name__ == '__main__':

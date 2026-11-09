@@ -9,7 +9,8 @@
 <p align="center">
   <a href="#get-started">Get started</a> ·
   <a href="#read-the-score">Read the score</a> ·
-  <a href="examples/README.md">Explore the example</a>
+  <a href="examples/README.md">Explore the example</a> ·
+  <a href="reports/README.md">Real repository reports</a>
 </p>
 
 Turn a local Git repository into a Festival Leverage Score report: an estimated effort ratio, contributor breakdown, and charts you can share. Ask your coding agent to run it, then open the report.
@@ -20,6 +21,8 @@ Turn a local Git repository into a Festival Leverage Score report: an estimated 
 
 *Example data, not a real team's results. [See the report and its inputs.](examples/README.md)*
 
+[Browse real repository reports](reports/README.md) for dated T3 Code, Crush, Codex, Gemini CLI and Aider measurements, including charts, full contributor CSVs and source provenance.
+
 ## Get started
 
 This repository is currently a private preview; installation requires GitHub access.
@@ -29,6 +32,8 @@ Ask your agent's skill installer:
 ```text
 Install the leverage skill from https://github.com/Obedience-Corp/leverage/tree/main/skills/leverage
 ```
+
+Only `skills/leverage/` is installed. The synthetic examples, real repository reports, tests and archive-maintenance scripts stay in this repository; they are not copied into your installed skill. Some installers temporarily download the full repository before copying that directory.
 
 Then, from the repository you want to measure:
 
@@ -143,4 +148,4 @@ just test all   # deterministic tests in a disposable container
 just test live  # verified Festival install and a repo outside a camp
 ```
 
-Tests run against a copy of the installable skill as an unprivileged container user. Runtime Python uses the standard library; PyYAML is a test dependency. The test image includes scc and a PNG rasterizer. All bundled examples use synthetic data.
+Tests run against a copy of the installable skill as an unprivileged container user. Runtime Python uses the standard library; PyYAML is a test dependency. The test image includes scc and a PNG rasterizer. `examples/` uses synthetic data; `reports/` contains real measured snapshots. Both remain outside the installable skill. Run `just reports check` to verify archived report hashes, CSV values, accounting and provenance.

@@ -1,0 +1,103 @@
+{
+  "schema_version": "leverage-archive/v1",
+  "source_url": "https://github.com/Aider-AI/aider",
+  "source_commit_date": "2026-05-22T07:02:20-07:00",
+  "measurement_date": "2026-11-09T21:01:24.493519Z",
+  "revision": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "target_subdirectory": ".",
+  "status": "complete",
+  "dirty": false,
+  "shallow": false,
+  "method": "contributor_worktree_v1",
+  "history_method": {
+    "id": "repository_commit_span_v1",
+    "refs": "all_local_refs",
+    "date_field": "committer",
+    "days_per_month": 30.44,
+    "minimum_months": 0.1
+  },
+  "effort_method": "repository_blame_weighted_v1",
+  "tools": {
+    "camp": "v0.18.2-2-g28e5c7a5",
+    "git": "git version 2.56.0",
+    "scc": "scc version 4.1.0"
+  },
+  "fingerprints": {
+    "manifest_digest": "6343c05f200e947ec83b74f96a7fc671a25ee46d4c7d5e81ff5bed76213b3e1d",
+    "content_digest": "a75abafbf77cfa1a30f5d7ace24f3663f4d1645e96c87b782517b38923d5ed29",
+    "identity_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "refs_digest": "145c31d727b3361da3265100edc9cedb458dbff41207396191ee5c9beb622981"
+  },
+  "config_sources": [
+    {
+      "path": ".gitignore",
+      "sha256": "93357fe614d76d51e777b287958dabf6e2494a868df7997a19692bd6f029137e"
+    }
+  ],
+  "scan_arguments": [
+    "--by-file",
+    "--format",
+    "json2",
+    "--output",
+    "",
+    "--format-multi",
+    "",
+    "--cocomo-project-type",
+    "organic",
+    "--exclude-dir",
+    "node_modules",
+    "--exclude-dir",
+    "vendor",
+    "--exclude-dir",
+    ".venv",
+    "--exclude-dir",
+    "venv",
+    "--exclude-dir",
+    "dist",
+    "--exclude-dir",
+    "build",
+    "--exclude-dir",
+    "target",
+    "--exclude-dir",
+    "__pycache__",
+    "--exclude-dir",
+    ".next",
+    "--exclude-dir",
+    ".nuxt",
+    "--exclude-dir",
+    "bower_components",
+    "--exclude-dir",
+    "Pods",
+    "--exclude-dir",
+    ".tox",
+    "--exclude-dir",
+    ".eggs",
+    "--exclude-dir",
+    ".mypy_cache",
+    "--exclude-dir",
+    ".pytest_cache",
+    "--exclude-dir",
+    ".cargo",
+    "--exclude-dir",
+    "worktrees",
+    "--exclude-dir",
+    ".worktrees",
+    "--exclude-dir",
+    ".camp-worktrees",
+    "."
+  ],
+  "input_sha256": {
+    "repository.json": "81ef6b8e42811194b01dd4e0fb3e8e27dd430ce9e5b576d409d01f9bbfdc4832",
+    "contributors.json": "22f0e41c4ee20b1af48809639a63a25bf94626c45374bdda62f71a5380aa967f"
+  },
+  "scope_override": null,
+  "ref_manifest": "refs.txt",
+  "artifact_sha256": {
+    "report.md": "1182fae33c33fea64eea031f7cc44b032dbf232c9d1ea43735dea3d1be54eed0",
+    "assets/contributors.svg": "2da36fff718968eb4b591baeb6a3e48c944b026d277d2b8f8d462e1a6d4a78c5",
+    "assets/contributors.png": "4f1d1349e5b3eadde67e6365e3654585b752bc040336f72ce7699306c0a75668",
+    "data/contributors.csv": "204a98d444d78326b9a3dd5ce1b3259314e3b6402bff4cedf3ffa48d2adfca7e",
+    "data/snapshot.json": "20890d7a81a3ee61aa00c91531d22cf0cf40a940c53e3fdae9a5ba4cf9aeb923",
+    "refs.txt": "5b3a7106efa8247b25aa4188e871dc59adb1118b28684e840a14189e6b0375fb"
+  }
+}

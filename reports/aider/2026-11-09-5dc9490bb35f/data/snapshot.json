@@ -1,0 +1,1300 @@
+{
+  "schema_version": "leverage-skill/v1",
+  "status": "complete",
+  "repository": "aider",
+  "revision": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "generated_at": "2026-11-09T21:01:24.493519Z",
+  "tools": {
+    "camp": "v0.18.2-2-g28e5c7a5",
+    "git": "git version 2.56.0",
+    "scc": "scc version 4.1.0"
+  },
+  "manifest_digest": "6343c05f200e947ec83b74f96a7fc671a25ee46d4c7d5e81ff5bed76213b3e1d",
+  "content_digest": "a75abafbf77cfa1a30f5d7ace24f3663f4d1645e96c87b782517b38923d5ed29",
+  "identity_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+  "refs_digest": "145c31d727b3361da3265100edc9cedb458dbff41207396191ee5c9beb622981",
+  "dirty": false,
+  "shallow": false,
+  "config_sources": [
+    {
+      "name": ".gitignore",
+      "sha256": "93357fe614d76d51e777b287958dabf6e2494a868df7997a19692bd6f029137e"
+    }
+  ],
+  "excluded_directories": [
+    "node_modules",
+    "vendor",
+    ".venv",
+    "venv",
+    "dist",
+    "build",
+    "target",
+    "__pycache__",
+    ".next",
+    ".nuxt",
+    "bower_components",
+    "Pods",
+    ".tox",
+    ".eggs",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".cargo",
+    "worktrees",
+    ".worktrees",
+    ".camp-worktrees"
+  ],
+  "summary": {
+    "files": 510,
+    "lines": 245334,
+    "code_lines": 206871,
+    "estimated_person_months": 648.1803130216016,
+    "attribution_coverage": 1,
+    "buckets": {
+      "contributors": {
+        "lines": 243775,
+        "share": 0.9936453977027236,
+        "estimated_person_months": 644.0613849154261
+      },
+      "excluded_identities": {
+        "lines": 1559,
+        "share": 0.006354602297276366,
+        "estimated_person_months": 4.118928106176382
+      },
+      "unavailable": {
+        "lines": 0,
+        "share": 0,
+        "estimated_person_months": 0
+      },
+      "uncommitted": {
+        "lines": 0,
+        "share": 0,
+        "estimated_person_months": 0
+      }
+    }
+  },
+  "contributors": [
+    {
+      "lines": 196904,
+      "share": 0.8025956451205296,
+      "estimated_person_months": 520.2266964839995,
+      "elapsed_person_months": 18.933158961770577,
+      "leverage": 27.477015195109804,
+      "row_id": "1aa6bd07adda68d9",
+      "name": "Paul Gauthier (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 332,
+      "share": 0.0013532571922358907,
+      "estimated_person_months": 0.8771546704621933,
+      "elapsed_person_months": 0.1,
+      "leverage": 8.771546704621933,
+      "row_id": "7bc1bdefeed3698e",
+      "name": "Andrey Popp",
+      "history_complete": true
+    },
+    {
+      "lines": 40245,
+      "share": 0.16404167379979945,
+      "estimated_person_months": 106.32858347214136,
+      "elapsed_person_months": 16.39401927592836,
+      "leverage": 6.485815447848446,
+      "row_id": "a7230a5103827aa0",
+      "name": "Paul Gauthier",
+      "history_complete": true
+    },
+    {
+      "lines": 201,
+      "share": 0.0008192912519259458,
+      "estimated_person_months": 0.5310484601292195,
+      "elapsed_person_months": 0.1,
+      "leverage": 5.3104846012921945,
+      "row_id": "4c4a85fa3dba49c5",
+      "name": "deansher",
+      "history_complete": true
+    },
+    {
+      "lines": 184,
+      "share": 0.0007499979619620599,
+      "estimated_person_months": 0.48613391375013126,
+      "elapsed_person_months": 0.1,
+      "leverage": 4.861339137501313,
+      "row_id": "879ecf308449c61f",
+      "name": "lentil32 (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 1652,
+      "share": 0.006733677354137625,
+      "estimated_person_months": 4.364637095191396,
+      "elapsed_person_months": 1.372355529396019,
+      "leverage": 3.180398228957693,
+      "row_id": "ea2f1b89e2471f47",
+      "name": "Paul Gauthier",
+      "history_complete": true
+    },
+    {
+      "lines": 91,
+      "share": 0.00037092290510080137,
+      "estimated_person_months": 0.24042492473511926,
+      "elapsed_person_months": 0.1,
+      "leverage": 2.4042492473511925,
+      "row_id": "a907d17f8e72c197",
+      "name": "malkoG",
+      "history_complete": true
+    },
+    {
+      "lines": 81,
+      "share": 0.0003301621462985155,
+      "estimated_person_months": 0.21400460333565557,
+      "elapsed_person_months": 0.1,
+      "leverage": 2.1400460333565556,
+      "row_id": "78097d97cc4cf0d2",
+      "name": "Carles Sala (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 80,
+      "share": 0.00032608607041828693,
+      "estimated_person_months": 0.21136257119570923,
+      "elapsed_person_months": 0.1,
+      "leverage": 2.1136257119570923,
+      "row_id": "3fa99b17c7a62f3f",
+      "name": "John-Mason P. Shackelford",
+      "history_complete": true
+    },
+    {
+      "lines": 79,
+      "share": 0.0003220099945380583,
+      "estimated_person_months": 0.20872053905576288,
+      "elapsed_person_months": 0.1,
+      "leverage": 2.0872053905576284,
+      "row_id": "c6fa6543b86338c4",
+      "name": "Gian-Carlo Pascutto",
+      "history_complete": true
+    },
+    {
+      "lines": 65,
+      "share": 0.0002649449322148581,
+      "estimated_person_months": 0.17173208909651375,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.7173208909651374,
+      "row_id": "92e001141224a7c0",
+      "name": "Matthew Tofano",
+      "history_complete": true
+    },
+    {
+      "lines": 58,
+      "share": 0.000236412401053258,
+      "estimated_person_months": 0.1532378641168892,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.5323786411688918,
+      "row_id": "a4dd5889555f68d2",
+      "name": "omarcinkonis",
+      "history_complete": true
+    },
+    {
+      "lines": 56,
+      "share": 0.00022826024929280083,
+      "estimated_person_months": 0.14795379983699647,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.4795379983699646,
+      "row_id": "84ad27b673438ce9",
+      "name": "Joseph Turian",
+      "history_complete": true
+    },
+    {
+      "lines": 54,
+      "share": 0.00022010809753234367,
+      "estimated_person_months": 0.14266973555710372,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.4266973555710372,
+      "row_id": "c76c837df30351b0",
+      "name": "zjy1412",
+      "history_complete": true
+    },
+    {
+      "lines": 46,
+      "share": 0.00018749949049051497,
+      "estimated_person_months": 0.12153347843753282,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.2153347843753282,
+      "row_id": "4cdfbfe37a89c0f1",
+      "name": "gmoz22",
+      "history_complete": true
+    },
+    {
+      "lines": 45,
+      "share": 0.0001834234146102864,
+      "estimated_person_months": 0.11889144629758644,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.1889144629758643,
+      "row_id": "1549020dd96d0ba7",
+      "name": "Jun Siang Cheah",
+      "history_complete": true
+    },
+    {
+      "lines": 45,
+      "share": 0.0001834234146102864,
+      "estimated_person_months": 0.11889144629758644,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.1889144629758643,
+      "row_id": "73bb0cdf2ab90a1f",
+      "name": "Stefan Hladnik (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 258,
+      "share": 0.0010516275770989752,
+      "estimated_person_months": 0.6816442921061623,
+      "elapsed_person_months": 0.5768968705893804,
+      "leverage": 1.181570445008252,
+      "row_id": "f9caf5110176ef20",
+      "name": "Chad Phillips",
+      "history_complete": true
+    },
+    {
+      "lines": 44,
+      "share": 0.00017934733873005779,
+      "estimated_person_months": 0.11624941415764008,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.1624941415764007,
+      "row_id": "ed54cc6b3426abbc",
+      "name": "Leon Mergen",
+      "history_complete": true
+    },
+    {
+      "lines": 43,
+      "share": 0.0001752712628498292,
+      "estimated_person_months": 0.11360738201769371,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.1360738201769371,
+      "row_id": "0b085b3e3236a60b",
+      "name": "Jaap Buurman",
+      "history_complete": true
+    },
+    {
+      "lines": 43,
+      "share": 0.0001752712628498292,
+      "estimated_person_months": 0.1136073820176937,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.136073820176937,
+      "row_id": "119a1c534e4b75e0",
+      "name": "Paul Walker",
+      "history_complete": true
+    },
+    {
+      "lines": 60,
+      "share": 0.00024456455281371517,
+      "estimated_person_months": 0.15852192839678192,
+      "elapsed_person_months": 0.1399478178079525,
+      "leverage": 1.1327216878388078,
+      "row_id": "5e06266de66903fc",
+      "name": "mubashir1osmani",
+      "history_complete": true
+    },
+    {
+      "lines": 309,
+      "share": 0.001259507446990633,
+      "estimated_person_months": 0.8163879312434268,
+      "elapsed_person_months": 0.7519459957658053,
+      "leverage": 1.0857002176226656,
+      "row_id": "e82ea5d2d50a99bd",
+      "name": "Bill Dengler",
+      "history_complete": true
+    },
+    {
+      "lines": 38,
+      "share": 0.00015489088344868628,
+      "estimated_person_months": 0.10039722131796187,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.0039722131796187,
+      "row_id": "8d4db5e71c0839f2",
+      "name": "Branch Vincent",
+      "history_complete": true
+    },
+    {
+      "lines": 38,
+      "share": 0.00015489088344868628,
+      "estimated_person_months": 0.10039722131796189,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.0039722131796187,
+      "row_id": "3006857087f7452c",
+      "name": "mrmaran",
+      "history_complete": true
+    },
+    {
+      "lines": 38,
+      "share": 0.00015489088344868628,
+      "estimated_person_months": 0.10039722131796189,
+      "elapsed_person_months": 0.1,
+      "leverage": 1.0039722131796187,
+      "row_id": "d48377a92fba3c9a",
+      "name": "Nikolay Sedelnikov",
+      "history_complete": true
+    },
+    {
+      "lines": 36,
+      "share": 0.00014673873168822912,
+      "estimated_person_months": 0.09511315703806915,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.9511315703806914,
+      "row_id": "4ad51735e69f9aeb",
+      "name": "Trevor Sullivan",
+      "history_complete": true
+    },
+    {
+      "lines": 34,
+      "share": 0.00013858657992777193,
+      "estimated_person_months": 0.08982909275817642,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.8982909275817642,
+      "row_id": "b472e5f86e73430b",
+      "name": "Ivan Fioravanti",
+      "history_complete": true
+    },
+    {
+      "lines": 34,
+      "share": 0.00013858657992777193,
+      "estimated_person_months": 0.08982909275817642,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.8982909275817642,
+      "row_id": "c13a064cc8d9d98b",
+      "name": "Konstantin L",
+      "history_complete": true
+    },
+    {
+      "lines": 34,
+      "share": 0.00013858657992777193,
+      "estimated_person_months": 0.08982909275817641,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.8982909275817641,
+      "row_id": "dd3c6d0a07d7de70",
+      "name": "Tamir Zahavi-Brunner",
+      "history_complete": true
+    },
+    {
+      "lines": 33,
+      "share": 0.00013451050404754335,
+      "estimated_person_months": 0.08718706061823006,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.8718706061823006,
+      "row_id": "490ccbc398aa587e",
+      "name": "Kyosuke Takayama",
+      "history_complete": true
+    },
+    {
+      "lines": 33,
+      "share": 0.00013451050404754335,
+      "estimated_person_months": 0.08718706061823005,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.8718706061823004,
+      "row_id": "5f75eebd0c4ce448",
+      "name": "Ryan Freckleton",
+      "history_complete": true
+    },
+    {
+      "lines": 32,
+      "share": 0.00013043442816731477,
+      "estimated_person_months": 0.08454502847828368,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.8454502847828368,
+      "row_id": "58d195b7680a1828",
+      "name": "Vincent Taverna",
+      "history_complete": true
+    },
+    {
+      "lines": 29,
+      "share": 0.000118206200526629,
+      "estimated_person_months": 0.0766189320584446,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.7661893205844459,
+      "row_id": "beb6aaae8a41bb5a",
+      "name": "timput",
+      "history_complete": true
+    },
+    {
+      "lines": 27,
+      "share": 0.00011005404876617183,
+      "estimated_person_months": 0.07133486777855186,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.7133486777855186,
+      "row_id": "203bff463e99fcfc",
+      "name": "KebobZ",
+      "history_complete": true
+    },
+    {
+      "lines": 26,
+      "share": 0.00010597797288594324,
+      "estimated_person_months": 0.0686928356386055,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.6869283563860549,
+      "row_id": "745d3d5acaa6ca3a",
+      "name": "kennyfrc",
+      "history_complete": true
+    },
+    {
+      "lines": 26,
+      "share": 0.00010597797288594324,
+      "estimated_person_months": 0.0686928356386055,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.6869283563860549,
+      "row_id": "97173f7aa759a7dc",
+      "name": "Jiawen Geng",
+      "history_complete": true
+    },
+    {
+      "lines": 67,
+      "share": 0.0002730970839753153,
+      "estimated_person_months": 0.17701615337640647,
+      "elapsed_person_months": 0.282271666788339,
+      "leverage": 0.6271127222596584,
+      "row_id": "c4e0801de044bb43",
+      "name": "Jun Siang Cheah",
+      "history_complete": true
+    },
+    {
+      "lines": 22,
+      "share": 8.967366936502889e-05,
+      "estimated_person_months": 0.05812470707882003,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.5812470707882003,
+      "row_id": "274b3d5a79766148",
+      "name": "Stein Martin Hustad",
+      "history_complete": true
+    },
+    {
+      "lines": 21,
+      "share": 8.559759348480031e-05,
+      "estimated_person_months": 0.05548267493887367,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.5548267493887367,
+      "row_id": "8b693ec551673812",
+      "name": "Ali Ayas (claude-sonnet-4-20250514)",
+      "history_complete": true
+    },
+    {
+      "lines": 21,
+      "share": 8.559759348480031e-05,
+      "estimated_person_months": 0.05548267493887367,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.5548267493887367,
+      "row_id": "7f9b631c79b0093b",
+      "name": "Mariusz Korzekwa",
+      "history_complete": true
+    },
+    {
+      "lines": 20,
+      "share": 8.152151760457173e-05,
+      "estimated_person_months": 0.052840642798927306,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.5284064279892731,
+      "row_id": "4f2d9b1d0f3202ea",
+      "name": "mw",
+      "history_complete": true
+    },
+    {
+      "lines": 18,
+      "share": 7.336936584411456e-05,
+      "estimated_person_months": 0.047556578519034574,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.4755657851903457,
+      "row_id": "a3fc21eaa65382cc",
+      "name": "jayesh thakare",
+      "history_complete": true
+    },
+    {
+      "lines": 429,
+      "share": 0.0017486365526180635,
+      "estimated_person_months": 1.1334317880369906,
+      "elapsed_person_months": 2.6214247365795496,
+      "leverage": 0.4323724317623931,
+      "row_id": "3345749100d47cde",
+      "name": "Andrew Grigorev",
+      "history_complete": true
+    },
+    {
+      "lines": 28,
+      "share": 0.00011413012464640041,
+      "estimated_person_months": 0.07397689991849823,
+      "elapsed_person_months": 0.1787502433445272,
+      "leverage": 0.41385621935022215,
+      "row_id": "53e6cdc30765aade",
+      "name": "Your Name",
+      "history_complete": true
+    },
+    {
+      "lines": 15,
+      "share": 6.114113820342879e-05,
+      "estimated_person_months": 0.03963048209919548,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.3963048209919548,
+      "row_id": "9feda240396e9500",
+      "name": "Varchas Gopalaswamy",
+      "history_complete": true
+    },
+    {
+      "lines": 26,
+      "share": 0.00010597797288594324,
+      "estimated_person_months": 0.0686928356386055,
+      "elapsed_person_months": 0.17643428785224122,
+      "leverage": 0.38933948993028966,
+      "row_id": "136c724f5e48b8b6",
+      "name": "Daniel Vainsencher",
+      "history_complete": true
+    },
+    {
+      "lines": 159,
+      "share": 0.0006480960649563452,
+      "estimated_person_months": 0.42008311025147205,
+      "elapsed_person_months": 1.0904637082055775,
+      "leverage": 0.385233462691522,
+      "row_id": "30f0bde14fd757a4",
+      "name": "Vasil Markoukin (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 14,
+      "share": 5.7065062323200206e-05,
+      "estimated_person_months": 0.03698844995924912,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.36988449959249114,
+      "row_id": "a76b741eb1754db0",
+      "name": "Jon Keys",
+      "history_complete": true
+    },
+    {
+      "lines": 14,
+      "share": 5.7065062323200206e-05,
+      "estimated_person_months": 0.03698844995924912,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.36988449959249114,
+      "row_id": "7e11bc75e0f3db51",
+      "name": "michal.sliwa",
+      "history_complete": true
+    },
+    {
+      "lines": 278,
+      "share": 0.001133149094703547,
+      "estimated_person_months": 0.7344849349050896,
+      "elapsed_person_months": 1.9980342324913616,
+      "leverage": 0.3676037792351814,
+      "row_id": "f555c579df6d9d40",
+      "name": "itlackey",
+      "history_complete": true
+    },
+    {
+      "lines": 12,
+      "share": 4.891291056274303e-05,
+      "estimated_person_months": 0.031704385679356385,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.31704385679356384,
+      "row_id": "2820996ee2b9b622",
+      "name": "Lih Chen",
+      "history_complete": true
+    },
+    {
+      "lines": 12,
+      "share": 4.891291056274303e-05,
+      "estimated_person_months": 0.031704385679356385,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.31704385679356384,
+      "row_id": "70cdd92b03c4c4a3",
+      "name": "Paul Maunders",
+      "history_complete": true
+    },
+    {
+      "lines": 156,
+      "share": 0.0006358678373156594,
+      "estimated_person_months": 0.41215701383163295,
+      "elapsed_person_months": 1.471091810848299,
+      "leverage": 0.28017083012240024,
+      "row_id": "d3d269859df1cd67",
+      "name": "\u67cf\u67ab",
+      "history_complete": true
+    },
+    {
+      "lines": 10,
+      "share": 4.0760758802285867e-05,
+      "estimated_person_months": 0.026420321399463653,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.26420321399463653,
+      "row_id": "e6972b1281335e6c",
+      "name": "Aaron Weisberg",
+      "history_complete": true
+    },
+    {
+      "lines": 10,
+      "share": 4.0760758802285867e-05,
+      "estimated_person_months": 0.026420321399463653,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.26420321399463653,
+      "row_id": "bdda8b9ef04b59b4",
+      "name": "Farhan Ahmad",
+      "history_complete": true
+    },
+    {
+      "lines": 10,
+      "share": 4.0760758802285867e-05,
+      "estimated_person_months": 0.026420321399463653,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.26420321399463653,
+      "row_id": "6fab687813344035",
+      "name": "Mike Bailey",
+      "history_complete": true
+    },
+    {
+      "lines": 9,
+      "share": 3.668468292205728e-05,
+      "estimated_person_months": 0.02377828925951729,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.2377828925951729,
+      "row_id": "c78144355b77f370",
+      "name": "Garrett Hopper",
+      "history_complete": true
+    },
+    {
+      "lines": 9,
+      "share": 3.668468292205728e-05,
+      "estimated_person_months": 0.023778289259517287,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.23778289259517285,
+      "row_id": "24147fd8eaedbd07",
+      "name": "Tyler Satre",
+      "history_complete": true
+    },
+    {
+      "lines": 8,
+      "share": 3.260860704182869e-05,
+      "estimated_person_months": 0.021136257119570925,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.21136257119570923,
+      "row_id": "92e6fa73811fffde",
+      "name": "Filippo Mattia Menghi",
+      "history_complete": true
+    },
+    {
+      "lines": 7,
+      "share": 2.8532531161600103e-05,
+      "estimated_person_months": 0.01849422497962456,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.18494224979624557,
+      "row_id": "72e2a797ddb61d2f",
+      "name": "Christian Clauss",
+      "history_complete": true
+    },
+    {
+      "lines": 7,
+      "share": 2.8532531161600103e-05,
+      "estimated_person_months": 0.01849422497962456,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.18494224979624557,
+      "row_id": "e0f2225b45619b3c",
+      "name": "Jack Harrington",
+      "history_complete": true
+    },
+    {
+      "lines": 7,
+      "share": 2.8532531161600103e-05,
+      "estimated_person_months": 0.01849422497962456,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.18494224979624557,
+      "row_id": "51192b55bfc6dc42",
+      "name": "Mario Lang",
+      "history_complete": true
+    },
+    {
+      "lines": 6,
+      "share": 2.4456455281371517e-05,
+      "estimated_person_months": 0.015852192839678193,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.15852192839678192,
+      "row_id": "60bbe36fe0f553eb",
+      "name": "Daniel Schreiber",
+      "history_complete": true
+    },
+    {
+      "lines": 6,
+      "share": 2.4456455281371517e-05,
+      "estimated_person_months": 0.015852192839678193,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.15852192839678192,
+      "row_id": "e0e4b758671be770",
+      "name": "FeepingCreature (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 6,
+      "share": 2.4456455281371517e-05,
+      "estimated_person_months": 0.015852192839678193,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.15852192839678192,
+      "row_id": "d022ba6efb08574e",
+      "name": "Max Yankov (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 6,
+      "share": 2.4456455281371517e-05,
+      "estimated_person_months": 0.01585219283967819,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.1585219283967819,
+      "row_id": "17c321a6cfe82212",
+      "name": "Yutaka Matsubara",
+      "history_complete": true
+    },
+    {
+      "lines": 5,
+      "share": 2.0380379401142933e-05,
+      "estimated_person_months": 0.013210160699731827,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.13210160699731827,
+      "row_id": "49f1d2d047bdda7b",
+      "name": "JV",
+      "history_complete": true
+    },
+    {
+      "lines": 5,
+      "share": 2.0380379401142933e-05,
+      "estimated_person_months": 0.013210160699731827,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.13210160699731827,
+      "row_id": "9ea25f0bf5ddb3e3",
+      "name": "Eryk Wieliczko",
+      "history_complete": true
+    },
+    {
+      "lines": 5,
+      "share": 2.0380379401142933e-05,
+      "estimated_person_months": 0.013210160699731827,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.13210160699731827,
+      "row_id": "a27a17053b1ad7df",
+      "name": "liam.liu",
+      "history_complete": true
+    },
+    {
+      "lines": 5,
+      "share": 2.0380379401142933e-05,
+      "estimated_person_months": 0.013210160699731827,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.13210160699731827,
+      "row_id": "ae0d5dc292ae15ff",
+      "name": "Vamsi Talupula",
+      "history_complete": true
+    },
+    {
+      "lines": 128,
+      "share": 0.0005217377126692591,
+      "estimated_person_months": 0.33818011391313474,
+      "elapsed_person_months": 2.7271659183822456,
+      "leverage": 0.12400423151142308,
+      "row_id": "4f818aae4b9007e2",
+      "name": "Luke Reeves",
+      "history_complete": true
+    },
+    {
+      "lines": 4,
+      "share": 1.6304303520914347e-05,
+      "estimated_person_months": 0.01056812855978546,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.1056812855978546,
+      "row_id": "ec2eed7d6f910e1b",
+      "name": "Charles Joachim",
+      "history_complete": true
+    },
+    {
+      "lines": 4,
+      "share": 1.6304303520914347e-05,
+      "estimated_person_months": 0.01056812855978546,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.1056812855978546,
+      "row_id": "b9ffbeb5a51e6259",
+      "name": "mdk",
+      "history_complete": true
+    },
+    {
+      "lines": 18,
+      "share": 7.336936584411456e-05,
+      "estimated_person_months": 0.047556578519034574,
+      "elapsed_person_months": 0.466176251399231,
+      "leverage": 0.10201415961515242,
+      "row_id": "484336db471034bc",
+      "name": "apaz-cli",
+      "history_complete": true
+    },
+    {
+      "lines": 75,
+      "share": 0.000305705691017144,
+      "estimated_person_months": 0.1981524104959774,
+      "elapsed_person_months": 2.4915433974546164,
+      "leverage": 0.07952998558982023,
+      "row_id": "0ce56a6096cd94da",
+      "name": "Trung Dinh",
+      "history_complete": true
+    },
+    {
+      "lines": 3,
+      "share": 1.2228227640685758e-05,
+      "estimated_person_months": 0.007926096419839096,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.07926096419839096,
+      "row_id": "a337b06ae1ec3f02",
+      "name": "Josh Klina",
+      "history_complete": true
+    },
+    {
+      "lines": 3,
+      "share": 1.2228227640685758e-05,
+      "estimated_person_months": 0.007926096419839096,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.07926096419839096,
+      "row_id": "ce6e9f82c74bdbe7",
+      "name": "Jun Siang Cheah",
+      "history_complete": true
+    },
+    {
+      "lines": 3,
+      "share": 1.2228227640685758e-05,
+      "estimated_person_months": 0.007926096419839095,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.07926096419839095,
+      "row_id": "ba1bc1ff11f1043c",
+      "name": "Christopher Toth",
+      "history_complete": true
+    },
+    {
+      "lines": 3,
+      "share": 1.2228227640685758e-05,
+      "estimated_person_months": 0.007926096419839095,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.07926096419839095,
+      "row_id": "902d5d2ee382f027",
+      "name": "Jintao Zhang",
+      "history_complete": true
+    },
+    {
+      "lines": 110,
+      "share": 0.0004483683468251445,
+      "estimated_person_months": 0.2906235353941002,
+      "elapsed_person_months": 3.710020015087361,
+      "leverage": 0.07833476213396029,
+      "row_id": "6bfa2c8316cb2dc3",
+      "name": "youknow",
+      "history_complete": true
+    },
+    {
+      "lines": 56,
+      "share": 0.00022826024929280083,
+      "estimated_person_months": 0.14795379983699644,
+      "elapsed_person_months": 1.9496698879398455,
+      "leverage": 0.07588659021314349,
+      "row_id": "cf5ea0ba5994057b",
+      "name": "Mir Adnan ALI",
+      "history_complete": true
+    },
+    {
+      "lines": 81,
+      "share": 0.0003301621462985155,
+      "estimated_person_months": 0.21400460333565557,
+      "elapsed_person_months": 2.9727324852776564,
+      "leverage": 0.07198918987682382,
+      "row_id": "224314a35ffa99b0",
+      "name": "Matteo Landi",
+      "history_complete": true
+    },
+    {
+      "lines": 113,
+      "share": 0.00046059657446583023,
+      "estimated_person_months": 0.29854963181393923,
+      "elapsed_person_months": 5.288523339781964,
+      "leverage": 0.05645236158232553,
+      "row_id": "2882f76e87d73624",
+      "name": "Joshua Vial",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "26263b09a458eb07",
+      "name": "Aleksandr Bobrov",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "e4eacb05bca9eea0",
+      "name": "cantalupo555",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "54064ad1787a6a0e",
+      "name": "Enno Richter",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "17f98ce74ef13bf1",
+      "name": "Evan Johnson",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "5010dfae8e26084f",
+      "name": "gordonlukch",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "3bcf8e4da98b8552",
+      "name": "Andrey Ivanov",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "602d537d72499e2d",
+      "name": "Jos\u00e9 Luis Di Biase",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "867802a45a26c66b",
+      "name": "Mark McDonald",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "1c119b21bd9d45cf",
+      "name": "Mingde (Matthew) Zeng",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "a800abe26c3ce623",
+      "name": "Nicolas Perez",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.0528406427989273,
+      "row_id": "8e0ae772d6b40821",
+      "name": "saviour",
+      "history_complete": true
+    },
+    {
+      "lines": 44,
+      "share": 0.00017934733873005779,
+      "estimated_person_months": 0.11624941415764008,
+      "elapsed_person_months": 2.5941385907918435,
+      "leverage": 0.04481233754059212,
+      "row_id": "e733080d001f8800",
+      "name": "Peter Schilling (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 19,
+      "share": 7.744544172434314e-05,
+      "estimated_person_months": 0.050198610658980944,
+      "elapsed_person_months": 1.3254964988806153,
+      "leverage": 0.03787155281162476,
+      "row_id": "aa7144e087132172",
+      "name": "Amir Elaguizy (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 72,
+      "share": 0.00029347746337645824,
+      "estimated_person_months": 0.19022631407613833,
+      "elapsed_person_months": 5.348110809972259,
+      "leverage": 0.035568880458018225,
+      "row_id": "63a160eb5f88f181",
+      "name": "Nimesh Ghelani",
+      "history_complete": true
+    },
+    {
+      "lines": 82,
+      "share": 0.0003342382221787441,
+      "estimated_person_months": 0.21664663547560198,
+      "elapsed_person_months": 6.763307903830244,
+      "leverage": 0.03203264416705162,
+      "row_id": "e9739c777a7808cd",
+      "name": "Krazer",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "606bc0f3a6c82bff",
+      "name": "Andrea Bergamasco",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "3236807532c49334",
+      "name": "Akira Komamura",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "772aa8ed7d88d69a",
+      "name": "Anton O\u0308dman",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "66a31d242b740571",
+      "name": "Ari Roffe",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "03261108e5150810",
+      "name": "wangboxue",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "e1e3a424293aa5b6",
+      "name": "Damilola Emmanuel Olowookere",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "e8a107965fdaa92f",
+      "name": "Emmanuel Ferdman",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "93852c68856122d4",
+      "name": "Zexin Yuan",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "1188196b27a2af69",
+      "name": "Greg OmniMind",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "63ed5aea68ea2d09",
+      "name": "Henry Fraser",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "9409e52e97c5052a",
+      "name": "JeongJuhyeon",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "bc99372e66d46bf2",
+      "name": "Jess Telford",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "74c4b830d8d6aa0d",
+      "name": "Josh Vera",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "7f4a56131e6bc04d",
+      "name": "Kay Gosho",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "4d1ee34ef4de38db",
+      "name": "Makar Ivashko",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "b031dfe83c03e18b",
+      "name": "Marco Mayer",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.1,
+      "leverage": 0.02642032139946365,
+      "row_id": "ffc57993370e1b60",
+      "name": "Mathis Beer (aider)",
+      "history_complete": true
+    },
+    {
+      "lines": 6,
+      "share": 2.4456455281371517e-05,
+      "estimated_person_months": 0.015852192839678193,
+      "elapsed_person_months": 0.6636777114663942,
+      "leverage": 0.02388537774555185,
+      "row_id": "13e22d2f2a5c52f5",
+      "name": "Jonathan Ellis",
+      "history_complete": true
+    },
+    {
+      "lines": 1,
+      "share": 4.076075880228587e-06,
+      "estimated_person_months": 0.002642032139946365,
+      "elapsed_person_months": 0.15600931705358448,
+      "leverage": 0.016935092017862672,
+      "row_id": "e098c3e5a1ba2397",
+      "name": "Jay Alammar",
+      "history_complete": true
+    },
+    {
+      "lines": 16,
+      "share": 6.521721408365739e-05,
+      "estimated_person_months": 0.04227251423914185,
+      "elapsed_person_months": 2.5114949871027403,
+      "leverage": 0.01683161402121985,
+      "row_id": "c0b417ede62562da",
+      "name": "Chris McCormick",
+      "history_complete": true
+    },
+    {
+      "lines": 27,
+      "share": 0.00011005404876617183,
+      "estimated_person_months": 0.07133486777855186,
+      "elapsed_person_months": 9.29194271061469,
+      "leverage": 0.007677067110741242,
+      "row_id": "ec06522ef76f5de8",
+      "name": "Titusz",
+      "history_complete": true
+    },
+    {
+      "lines": 2,
+      "share": 8.152151760457173e-06,
+      "estimated_person_months": 0.00528406427989273,
+      "elapsed_person_months": 11.086286927532,
+      "leverage": 0.00047663066222561264,
+      "row_id": "2fe1e185c691401b",
+      "name": "Ikko Eltociear Ashimine",
+      "history_complete": true
+    }
+  ],
+  "contributors_collected": true,
+  "contributors_complete": true,
+  "omitted_contributors": 0,
+  "score": {
+    "full_leverage": 36.24161481191732,
+    "actual_person_months": 17.884973293421258,
+    "estimated_people": 22.14682172724904,
+    "estimated_months": 29.267419090843745
+  },
+  "view": "overview",
+  "effort_method": "repository_blame_weighted_v1",
+  "matched_identities": null,
+  "diagnostic_codes": []
+}

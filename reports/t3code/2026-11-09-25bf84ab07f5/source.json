@@ -1,0 +1,139 @@
+{
+  "schema_version": "leverage-archive/v1",
+  "source_url": "https://github.com/pingdotgg/t3code",
+  "source_commit_date": "2026-11-07T09:19:49-08:00",
+  "measurement_date": "2026-11-09T00:33:14.458864Z",
+  "revision": "25bf84ab07f53f141c20239c63e383823a9d5ea0",
+  "target_subdirectory": ".",
+  "status": "complete",
+  "dirty": true,
+  "shallow": false,
+  "method": "contributor_worktree_v1",
+  "history_method": {
+    "id": "repository_commit_span_v1",
+    "refs": "all_local_refs",
+    "date_field": "committer",
+    "days_per_month": 30.44,
+    "minimum_months": 0.1
+  },
+  "effort_method": "repository_blame_weighted_v1",
+  "tools": {
+    "camp": "v0.18.2",
+    "git": "git version 2.56.0",
+    "scc": "scc version 4.1.0"
+  },
+  "fingerprints": {
+    "manifest_digest": "fd7edea8a02def2ccf04f58dbf9da4bce4077f2d3224e0d0b6743756dc651bfe",
+    "content_digest": "bf0dcbbdb82297b3ca53c91d580130496950fb508ef7a650623470f187c976e4",
+    "identity_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "refs_digest": "4f4f24c11980e5f03d02c5b9753df4f06477e9ff8a675a6f2680b126defb18c9"
+  },
+  "config_sources": [
+    {
+      "path": ".gitignore",
+      "sha256": "103b288ea9b064114fb35b8986f0f01f39cd232220424181979284f87ab35f70"
+    },
+    {
+      "path": ".sccignore",
+      "sha256": "995eb13b8159396b30508d21111b9db2620a226cf302551326d80ec09be0d807"
+    },
+    {
+      "path": "apps/marketing/.gitignore",
+      "sha256": "35f2aaeb0e11f2d9a2ec0e134b40141ab236ab6e43f1f6bbb1f74be13d177674"
+    },
+    {
+      "path": "apps/mobile/.gitignore",
+      "sha256": "5936b94a73a28b6735de672b54c2c058a33c9ae1edb62d87d6a4418e14447805"
+    },
+    {
+      "path": "apps/mobile/modules/t3-highlights/android/.gitignore",
+      "sha256": "e305bdd2c0133ea28e29af6dd6af0290fb5b609e1d5360533cdd9a6e533b827d"
+    },
+    {
+      "path": "apps/mobile/modules/t3-review-diff/tests/android/.gitignore",
+      "sha256": "8c14e5ce2a4b785f38e12036540e8838090de3a962d6e91132c34bf1f129d2a2"
+    },
+    {
+      "path": "apps/mobile/modules/t3-terminal/android/.gitignore",
+      "sha256": "e305bdd2c0133ea28e29af6dd6af0290fb5b609e1d5360533cdd9a6e533b827d"
+    },
+    {
+      "path": "apps/server/.gitignore",
+      "sha256": "1a9ba1479331c1ee35add00917198fb47e2c75de2e39eae2c6ed9963f4eca2cd"
+    },
+    {
+      "path": "evals/.gitignore",
+      "sha256": "247681cefffa8448d973f21147c92b38b63f492a98a50aca3b3c490bc97499e1"
+    },
+    {
+      "path": "packaging/aur/.gitignore",
+      "sha256": "79c16b95f0c86a7c1b5c26bb5879ef8f2ceba717ca7e8222d831d97a306af124"
+    }
+  ],
+  "scan_arguments": [
+    "--by-file",
+    "--format",
+    "json2",
+    "--output",
+    "",
+    "--format-multi",
+    "",
+    "--cocomo-project-type",
+    "organic",
+    "--exclude-dir",
+    "node_modules",
+    "--exclude-dir",
+    "vendor",
+    "--exclude-dir",
+    ".venv",
+    "--exclude-dir",
+    "venv",
+    "--exclude-dir",
+    "dist",
+    "--exclude-dir",
+    "build",
+    "--exclude-dir",
+    "target",
+    "--exclude-dir",
+    "__pycache__",
+    "--exclude-dir",
+    ".next",
+    "--exclude-dir",
+    ".nuxt",
+    "--exclude-dir",
+    "bower_components",
+    "--exclude-dir",
+    "Pods",
+    "--exclude-dir",
+    ".tox",
+    "--exclude-dir",
+    ".eggs",
+    "--exclude-dir",
+    ".mypy_cache",
+    "--exclude-dir",
+    ".pytest_cache",
+    "--exclude-dir",
+    ".cargo",
+    "--exclude-dir",
+    "worktrees",
+    "--exclude-dir",
+    ".worktrees",
+    "--exclude-dir",
+    ".camp-worktrees",
+    "."
+  ],
+  "input_sha256": {
+    "repository.json": "31587f8c7aea02f013c74be328121aa1eebc6f219d33a4ef5a7a67605349907b",
+    "contributors.json": "e074655939903fdb099a142618da41bff7045eb7940d1abe1f77e41aef516a50"
+  },
+  "scope_override": "scope/.sccignore",
+  "ref_manifest": "refs.txt",
+  "artifact_sha256": {
+    "report.md": "3b8cb9f6e77385071641186192254c82348978b6a01031c8ef3033e36939792d",
+    "assets/contributors.svg": "36759304e173c49ac8f0ec16ceb25cbc5c53ebd73e01c9110e907a6eb444b2bf",
+    "assets/contributors.png": "7fdc32efb7dd1e533c167f9bce5e4d18cde8c4e3b8d9a961feaf67b70df06656",
+    "data/contributors.csv": "8e9900888f35c4b62eb71d516c8c68cd6b7499d0c36dd36d9e9eb4c69465c769",
+    "data/snapshot.json": "ff574992ef079286b7453c16a9e919059a7513673dcbe82ddd0e96b033f9e110",
+    "refs.txt": "8678f792a1330a68838026a03297f54ab859d5cc1d3ea17336514468bd6a3916"
+  }
+}

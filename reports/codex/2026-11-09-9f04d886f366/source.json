@@ -1,0 +1,119 @@
+{
+  "schema_version": "leverage-archive/v1",
+  "source_url": "https://github.com/openai/codex",
+  "source_commit_date": "2026-11-09T20:24:40Z",
+  "measurement_date": "2026-11-09T21:03:45.067247Z",
+  "revision": "9f04d886f3663b584fba87d6fd71001fb6f9fcf3",
+  "target_subdirectory": ".",
+  "status": "complete",
+  "dirty": false,
+  "shallow": false,
+  "method": "contributor_worktree_v1",
+  "history_method": {
+    "id": "repository_commit_span_v1",
+    "refs": "all_local_refs",
+    "date_field": "committer",
+    "days_per_month": 30.44,
+    "minimum_months": 0.1
+  },
+  "effort_method": "repository_blame_weighted_v1",
+  "tools": {
+    "camp": "v0.18.2-2-g28e5c7a5",
+    "git": "git version 2.56.0",
+    "scc": "scc version 4.1.0"
+  },
+  "fingerprints": {
+    "manifest_digest": "719b8a4df91cda406ffbd76a596d3f5d8e6c19fad860d3f66a8686e1eff00745",
+    "content_digest": "499ae9d044953602787828520cc34da48604834fefbf777ef10f6e7cbb853ef2",
+    "identity_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "refs_digest": "3c6edcb643a6fa48ab12b41f08eaf764c5e3be03d466d700458a0608dc530ca6"
+  },
+  "config_sources": [
+    {
+      "path": ".gitignore",
+      "sha256": "cb7ad0c00bee003f77837a731bdea2539c999bce2333a1fda584f1860e3f5740"
+    },
+    {
+      "path": "codex-cli/.gitignore",
+      "sha256": "5f4d0cb39ea5878aeb6d812356654346b4f5f4284ab0d018f2b027c381b636f5"
+    },
+    {
+      "path": "codex-rs/.gitignore",
+      "sha256": "8a9d40df4bfdfba6af9e542ca8fe41db0ae8f08cee412da7461930d56cd822a6"
+    },
+    {
+      "path": "codex-rs/v8-poc/.gitignore",
+      "sha256": "edd63e92bacb7601d91254be7ccd8c803e2f916e0efafa8f1949b4ac21b34d8b"
+    },
+    {
+      "path": "tools/argument-comment-lint/.gitignore",
+      "sha256": "44c92e3a70ad3307b7056871c2bdb096d8bfa9373f5bf06a79bb6324a20ff2fb"
+    }
+  ],
+  "scan_arguments": [
+    "--by-file",
+    "--format",
+    "json2",
+    "--output",
+    "",
+    "--format-multi",
+    "",
+    "--cocomo-project-type",
+    "organic",
+    "--exclude-dir",
+    "node_modules",
+    "--exclude-dir",
+    "vendor",
+    "--exclude-dir",
+    ".venv",
+    "--exclude-dir",
+    "venv",
+    "--exclude-dir",
+    "dist",
+    "--exclude-dir",
+    "build",
+    "--exclude-dir",
+    "target",
+    "--exclude-dir",
+    "__pycache__",
+    "--exclude-dir",
+    ".next",
+    "--exclude-dir",
+    ".nuxt",
+    "--exclude-dir",
+    "bower_components",
+    "--exclude-dir",
+    "Pods",
+    "--exclude-dir",
+    ".tox",
+    "--exclude-dir",
+    ".eggs",
+    "--exclude-dir",
+    ".mypy_cache",
+    "--exclude-dir",
+    ".pytest_cache",
+    "--exclude-dir",
+    ".cargo",
+    "--exclude-dir",
+    "worktrees",
+    "--exclude-dir",
+    ".worktrees",
+    "--exclude-dir",
+    ".camp-worktrees",
+    "."
+  ],
+  "input_sha256": {
+    "repository.json": "9f28ca8165af6d2fd891f6d8b1ce20e12dbb7a8828a57a84bc0b714345030340",
+    "contributors.json": "89fabd4c6048efeca3a937fa0735400c581e2e349b14b0ebf46f56a0106119f9"
+  },
+  "scope_override": null,
+  "ref_manifest": "refs.txt",
+  "artifact_sha256": {
+    "report.md": "91428830561e7da81535d87349dd6b7bc4d13fc6d52694164cf0fc391feb982a",
+    "assets/contributors.svg": "f91421948464b36b4d972f3f48a44f7fc119e068b5ff0c121f3ae4cb8f075b52",
+    "assets/contributors.png": "37ddf8c43fc9e124319b11f0378c2381f04a8bde22179e97665f83bdadf19775",
+    "data/contributors.csv": "2ef81e46b9f7ad58a681d18102737c034b77863b3020ff8bd392ecc5024f8600",
+    "data/snapshot.json": "c83c240bdc34c571f8214219dcdbe9bbdae985445a9b2d8499710e8a8037d264",
+    "refs.txt": "4bb971c8f48b5c0bbd3c0529d04f09fd6f121e959b8c8354e8a80f3cf004c2d7"
+  }
+}
