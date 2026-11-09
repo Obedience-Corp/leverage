@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1050" viewBox="0 0 1200 1050" role="img" aria-labelledby="title desc">
+<title id="title">t3code leverage report: complete</title>
+<desc id="desc">Sorted by ownership. Bars encode physical-line share, not model ratio. 416 rows collected. Null ratios are unavailable. Status complete.</desc>
+<rect width="1200" height="1050" rx="24" fill="#0b1522"/>
+<text x="52" y="48" font-family="Arial,sans-serif" font-size="14" fill="#5ee7cc" text-anchor="start">CAMP / REPOSITORY LEVERAGE</text>
+<text x="52" y="100" font-family="Arial,sans-serif" font-size="34" fill="#edf4fa" text-anchor="start">t3code</text>
+<text x="1148" y="48" font-family="Arial,sans-serif" font-size="14" fill="#a5b6c7" text-anchor="end">2026-11-09</text>
+<text x="1148" y="78" font-family="Arial,sans-serif" font-size="14" fill="#a5b6c7" text-anchor="end">25bf84ab07f5</text>
+<text x="52" y="137" font-family="Arial,sans-serif" font-size="18" fill="#a5b6c7" text-anchor="start">COMPLETE · overview view · calendar-span effort proxy</text>
+<rect x="52.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
+<text x="76" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">1,894,416</text>
+<text x="76" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">REPOSITORY CODE LINES</text>
+<rect x="425.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
+<text x="449" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">416</text>
+<text x="449" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">CONTRIBUTOR ROWS</text>
+<rect x="798.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
+<text x="822" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">6,630.7</text>
+<text x="822" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">REPOSITORY ESTIMATED PM</text>
+<text x="52" y="329" font-family="Arial,sans-serif" font-size="24" fill="#edf4fa" text-anchor="start">Contributors sorted by line ownership</text>
+<text x="52" y="357" font-family="Arial,sans-serif" font-size="16" fill="#a5b6c7" text-anchor="start">Bar length is share of all counted physical lines. Ratios are a separate metric.</text>
+<text x="52" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">CONTRIBUTOR</text>
+<text x="940" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="end">SHARE</text>
+<text x="1148" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="end">MODEL RATIO</text>
+<rect x="304.00" y="414.00" width="1.00" height="416" rx="0" fill="#293b50"/>
+<text x="304.0" y="852" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">0.0%</text>
+<rect x="439.00" y="414.00" width="1.00" height="416" rx="0" fill="#293b50"/>
+<text x="439.0" y="852" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">17.5%</text>
+<rect x="574.00" y="414.00" width="1.00" height="416" rx="0" fill="#293b50"/>
+<text x="574.0" y="852" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">35.0%</text>
+<rect x="709.00" y="414.00" width="1.00" height="416" rx="0" fill="#293b50"/>
+<text x="709.0" y="852" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">52.5%</text>
+<rect x="844.00" y="414.00" width="1.00" height="416" rx="0" fill="#293b50"/>
+<text x="844.0" y="852" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">70.0%</text>
+<text x="52" y="448" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Julius Marminge</text>
+<rect x="304.00" y="428.00" width="480.48" height="26" rx="4" fill="#5ee7cc"/>
+<text x="940" y="448" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">62.28%</text>
+<text x="1148" y="448" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">462.77x</text>
+<text x="52" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Theo Browne</text>
+<rect x="304.00" y="478.00" width="79.74" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">10.34%</text>
+<text x="1148" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">76.65x</text>
+<text x="52" y="548" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">maria-rcks</text>
+<rect x="304.00" y="528.00" width="34.63" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="548" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">4.49%</text>
+<text x="1148" y="548" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">37.69x</text>
+<text x="52" y="598" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Yash Singh</text>
+<rect x="304.00" y="578.00" width="13.21" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="598" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">1.71%</text>
+<text x="1148" y="598" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">14.03x</text>
+<text x="52" y="648" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Chris Deeming</text>
+<rect x="304.00" y="628.00" width="8.18" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="648" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">1.06%</text>
+<text x="1148" y="648" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">34.99x</text>
+<text x="52" y="698" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Alex Southwell</text>
+<rect x="304.00" y="678.00" width="6.56" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="698" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">0.85%</text>
+<text x="1148" y="698" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">16.76x</text>
+<text x="52" y="748" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Victor</text>
+<rect x="304.00" y="728.00" width="6.10" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="748" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">0.79%</text>
+<text x="1148" y="748" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">87.32x</text>
+<text x="52" y="798" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Yordis Prieto</text>
+<rect x="304.00" y="778.00" width="5.73" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="798" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">0.74%</text>
+<text x="1148" y="798" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">13.39x</text>
+<rect x="52.00" y="888.00" width="1096.00" height="106" rx="14" fill="#142438"/>
+<text x="76" y="917" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">REPOSITORY LINE ACCOUNTING</text>
+<rect x="76.00" y="930.00" width="919.78" height="14" rx="0" fill="#5ee7cc"/>
+<rect x="995.78" y="930.00" width="128.22" height="14" rx="0" fill="#f4b46a"/>
+<rect x="1124.00" y="930.00" width="0.00" height="14" rx="0" fill="#ba9af6"/>
+<rect x="1124.00" y="930.00" width="0.00" height="14" rx="0" fill="#f28d97"/>
+<text x="76" y="972" font-family="Arial,sans-serif" font-size="13" fill="#5ee7cc" text-anchor="start">Eligible contributors 87.77%</text>
+<text x="346" y="972" font-family="Arial,sans-serif" font-size="13" fill="#f4b46a" text-anchor="start">Excluded identities 12.23%</text>
+<text x="616" y="972" font-family="Arial,sans-serif" font-size="13" fill="#ba9af6" text-anchor="start">Uncommitted 0.00%</text>
+<text x="886" y="972" font-family="Arial,sans-serif" font-size="13" fill="#f28d97" text-anchor="start">Unavailable 0.00%</text>
+<text x="52" y="1025" font-family="Arial,sans-serif" font-size="14" fill="#a5b6c7" text-anchor="start">Estimated effort / calendar span. Not hours worked or proof of AI use. See report.md for scope and diagnostics.</text>
+</svg>

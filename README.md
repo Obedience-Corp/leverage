@@ -8,6 +8,8 @@ An installable agent skill for Camp leverage reports, contributor tables and exa
 
 [Inspect the synthetic example](examples/README.md).
 
+[Browse real repository reports](reports/README.md): dated measurements of T3 Code, Crush, Codex, Gemini CLI and Aider, with charts, full contributor CSVs and source provenance.
+
 ## Install the skill
 
 Ask Codex's skill installer to install `skills/leverage` from this repository:
@@ -83,6 +85,6 @@ just test all   # deterministic install/render tests in a disposable container
 just test live  # actual verified Festival install and outside-camp Git workflow
 ```
 
-Tests copy the installable directory and run as an unprivileged container user. Filesystem mutation/install tests refuse the host lane. Runtime scripts use Python's standard library; PyYAML is a test-only dependency for validating metadata. The Docker test image includes scc and a rasterizer. Examples use synthetic data; no private camp paths or real contributor exports are bundled.
+Tests copy the installable directory and run as an unprivileged container user. Filesystem mutation/install tests refuse the host lane. Runtime scripts use Python's standard library; PyYAML is a test-only dependency for validating metadata. The Docker test image includes scc and a rasterizer. `examples/` uses synthetic data; `reports/` contains real measured snapshots with portable contributor data and explicit provenance. Neither belongs to the installable skill directory. Run `just reports check` to verify report hashes, CSV values, accounting and portable metadata.
 
 Nothing is published by invoking the skill. Raw JSON includes original identities/local paths; portable data omits them while retaining display names and exact metrics.

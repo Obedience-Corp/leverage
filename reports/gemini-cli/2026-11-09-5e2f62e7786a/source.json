@@ -1,0 +1,131 @@
+{
+  "schema_version": "leverage-archive/v1",
+  "source_url": "https://github.com/google-gemini/gemini-cli",
+  "source_commit_date": "2026-11-09T19:54:42Z",
+  "measurement_date": "2026-11-09T21:01:37.621538Z",
+  "revision": "5e2f62e7786a7c670f5a5e21ab653ebcd45b7a7d",
+  "target_subdirectory": ".",
+  "status": "complete",
+  "dirty": false,
+  "shallow": false,
+  "method": "contributor_worktree_v1",
+  "history_method": {
+    "id": "repository_commit_span_v1",
+    "refs": "all_local_refs",
+    "date_field": "committer",
+    "days_per_month": 30.44,
+    "minimum_months": 0.1
+  },
+  "effort_method": "repository_blame_weighted_v1",
+  "tools": {
+    "camp": "v0.18.2-2-g28e5c7a5",
+    "git": "git version 2.56.0",
+    "scc": "scc version 4.1.0"
+  },
+  "fingerprints": {
+    "manifest_digest": "d4da2288c70f2a155d52d215261c3413d8ddc23f60af9d29fa5ed49a0187f0b2",
+    "content_digest": "562a8dd1fbed8098329da535db3af8619882f53461765e9f8775da6479588435",
+    "identity_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "refs_digest": "e599b8d2aea725d23e2b0ec757c14ce087734bb22c72f69ff9828a1a8124cb3d"
+  },
+  "config_sources": [
+    {
+      "path": ".gitignore",
+      "sha256": "344a02a37dfd53e155516e0aad0bb442760d93ca803e1bfd373ac39ce07cc81b"
+    },
+    {
+      "path": "packages/cli/src/commands/extensions/examples/custom-commands/.gitignore",
+      "sha256": "86a7cc4e4961f35f24e99ca90a0077702a19f913489a9f332ed9bc0e259fdfba"
+    },
+    {
+      "path": "packages/cli/src/commands/extensions/examples/exclude-tools/.gitignore",
+      "sha256": "86a7cc4e4961f35f24e99ca90a0077702a19f913489a9f332ed9bc0e259fdfba"
+    },
+    {
+      "path": "packages/cli/src/commands/extensions/examples/hooks/.gitignore",
+      "sha256": "86a7cc4e4961f35f24e99ca90a0077702a19f913489a9f332ed9bc0e259fdfba"
+    },
+    {
+      "path": "packages/cli/src/commands/extensions/examples/mcp-server/.gitignore",
+      "sha256": "86a7cc4e4961f35f24e99ca90a0077702a19f913489a9f332ed9bc0e259fdfba"
+    },
+    {
+      "path": "packages/cli/src/commands/extensions/examples/skills/.gitignore",
+      "sha256": "86a7cc4e4961f35f24e99ca90a0077702a19f913489a9f332ed9bc0e259fdfba"
+    },
+    {
+      "path": "tools/caretaker-agent/cloudrun/triage-worker/.gitignore",
+      "sha256": "529f03367b7795528be3438f511e6096bad72cdc32b34c6539939630d2fdacab"
+    },
+    {
+      "path": "tools/caretaker-agent/evals/triage/.gitignore",
+      "sha256": "15c0190b29aec96c8365cc70d56207a7ca5e8f95b0adb242b3c85e07f9a74b4a"
+    }
+  ],
+  "scan_arguments": [
+    "--by-file",
+    "--format",
+    "json2",
+    "--output",
+    "",
+    "--format-multi",
+    "",
+    "--cocomo-project-type",
+    "organic",
+    "--exclude-dir",
+    "node_modules",
+    "--exclude-dir",
+    "vendor",
+    "--exclude-dir",
+    ".venv",
+    "--exclude-dir",
+    "venv",
+    "--exclude-dir",
+    "dist",
+    "--exclude-dir",
+    "build",
+    "--exclude-dir",
+    "target",
+    "--exclude-dir",
+    "__pycache__",
+    "--exclude-dir",
+    ".next",
+    "--exclude-dir",
+    ".nuxt",
+    "--exclude-dir",
+    "bower_components",
+    "--exclude-dir",
+    "Pods",
+    "--exclude-dir",
+    ".tox",
+    "--exclude-dir",
+    ".eggs",
+    "--exclude-dir",
+    ".mypy_cache",
+    "--exclude-dir",
+    ".pytest_cache",
+    "--exclude-dir",
+    ".cargo",
+    "--exclude-dir",
+    "worktrees",
+    "--exclude-dir",
+    ".worktrees",
+    "--exclude-dir",
+    ".camp-worktrees",
+    "."
+  ],
+  "input_sha256": {
+    "repository.json": "cbf693d9c90fbfcba66df3e6aeff12b40a5152f2fed33eab4c9e7ceb181ab725",
+    "contributors.json": "2eb0a8268f1d711a1048385b433c23bfeabf285c38d8da0e2388fbb23c5deaa6"
+  },
+  "scope_override": null,
+  "ref_manifest": "refs.txt",
+  "artifact_sha256": {
+    "report.md": "9876aa5b7d52b3e3cf0369a783a40b7139f011fea86a643d2dd568914116f6cb",
+    "assets/contributors.svg": "3e82880440b944961b21fe169a2461ade5d426781ad953b1cd90cd25b5dbbaa9",
+    "assets/contributors.png": "386440fb791e049ffafcb84eafd67cd0f9a014e31a856e3e12b9e2a8ea601847",
+    "data/contributors.csv": "42e6236ca88475ebd5d914d8925052858a09e17c93f6d67085560df770cb7fb0",
+    "data/snapshot.json": "bc9eb8f255b59a1130bd884bb37bef9d8e0a39297054b973e827f6e34c73b5f8",
+    "refs.txt": "a6ac52d0258a6f38fd8954bc4c2f2be4623f70fd3f55680acd2fe7193329cd5d"
+  }
+}

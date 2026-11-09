@@ -1,0 +1,103 @@
+{
+  "schema_version": "leverage-archive/v1",
+  "source_url": "https://github.com/charmbracelet/crush",
+  "source_commit_date": "2026-01-24T19:42:55-03:00",
+  "measurement_date": "2026-11-09T05:39:13.476706Z",
+  "revision": "77bfd1a708e19b58d3c6525c46dd0c2c3add3cf7",
+  "target_subdirectory": ".",
+  "status": "complete",
+  "dirty": false,
+  "shallow": false,
+  "method": "contributor_worktree_v1",
+  "history_method": {
+    "id": "repository_commit_span_v1",
+    "refs": "all_local_refs",
+    "date_field": "committer",
+    "days_per_month": 30.44,
+    "minimum_months": 0.1
+  },
+  "effort_method": "repository_blame_weighted_v1",
+  "tools": {
+    "camp": "v0.18.2-2-g28e5c7a5",
+    "git": "git version 2.56.0",
+    "scc": "scc version 4.1.0"
+  },
+  "fingerprints": {
+    "manifest_digest": "6d6c67439c0107c3db73e4aeb0b52fca997b8d5b1fe1c726026560cab00a2854",
+    "content_digest": "514cb1e2c4d5e0e68c7f6951d1b61124ff27ccee28b05dc740fdaa50b48b6932",
+    "identity_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "refs_digest": "688fdc7f466c83196d8794658c2642e5241fd4f82db5aa03890c8eec8f0eaf62"
+  },
+  "config_sources": [
+    {
+      "path": ".gitignore",
+      "sha256": "e8e9d09f68c01737448a5a3e127dd6426187909a88330e45c6112d22d62ce234"
+    }
+  ],
+  "scan_arguments": [
+    "--by-file",
+    "--format",
+    "json2",
+    "--output",
+    "",
+    "--format-multi",
+    "",
+    "--cocomo-project-type",
+    "organic",
+    "--exclude-dir",
+    "node_modules",
+    "--exclude-dir",
+    "vendor",
+    "--exclude-dir",
+    ".venv",
+    "--exclude-dir",
+    "venv",
+    "--exclude-dir",
+    "dist",
+    "--exclude-dir",
+    "build",
+    "--exclude-dir",
+    "target",
+    "--exclude-dir",
+    "__pycache__",
+    "--exclude-dir",
+    ".next",
+    "--exclude-dir",
+    ".nuxt",
+    "--exclude-dir",
+    "bower_components",
+    "--exclude-dir",
+    "Pods",
+    "--exclude-dir",
+    ".tox",
+    "--exclude-dir",
+    ".eggs",
+    "--exclude-dir",
+    ".mypy_cache",
+    "--exclude-dir",
+    ".pytest_cache",
+    "--exclude-dir",
+    ".cargo",
+    "--exclude-dir",
+    "worktrees",
+    "--exclude-dir",
+    ".worktrees",
+    "--exclude-dir",
+    ".camp-worktrees",
+    "."
+  ],
+  "input_sha256": {
+    "repository.json": "6681c0cc27611e544f9c3b5e39ccc001aa0f45862776da5397fee6c1f9c56d13",
+    "contributors.json": "bee92a1055824c6a44954e876e8cd11585d626e45de06f27a68a48f628b87708"
+  },
+  "scope_override": null,
+  "ref_manifest": "refs.txt",
+  "artifact_sha256": {
+    "report.md": "2abf46a7afb201e105a74c2886eaadb420f55eb56318e5ef3c383116487e4486",
+    "assets/contributors.svg": "f1ebc24d39490d39ec7e2fe7a28433b223eb5cbde955441a6812b328c34e12a9",
+    "assets/contributors.png": "0099d9ce1a78db421bae8d1ca654de046f7febe8b5a2aae1f16c11ed1fce8a71",
+    "data/contributors.csv": "73d2156a9e9e43db0edd494154bbedbf7a64b708cd0d9f685a3f6c57ea08fa8d",
+    "data/snapshot.json": "ec451f7d91997bcb7a2f6beaff65153b787c13c3aaf5871b064b5b8e8259ff11",
+    "refs.txt": "420b6662a6fdedee95d3605dca3004a52686261eebdcb469cbbf78e5977ddbf0"
+  }
+}
