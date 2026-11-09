@@ -175,6 +175,18 @@ class BootstrapTests(unittest.TestCase):
 
 
 class ReportTests(unittest.TestCase):
+    def test_installable_directory_excludes_repository_examples_and_reports(self):
+        runtime = {'SKILL.md', 'agents', 'assets', 'references', 'scripts'}
+        self.assertEqual({p.name for p in SKILL.iterdir()}, runtime)
+        self.assertTrue((SOURCE/'examples').is_dir())
+        self.assertTrue((SOURCE/'reports').is_dir())
+        for name in ('examples', 'reports', 'tests', 'out'):
+            self.assertFalse((SKILL/name).exists())
+        self.assertFalse((SKILL/'scripts/archive_report.py').exists())
+        self.assertFalse((SKILL/'scripts/check_reports.py').exists())
+        for path in SKILL.rglob('*'):
+            self.assertTrue(path.resolve().is_relative_to(SKILL.resolve()))
+
     def test_exact_accounting_and_portable_data(self):
         repo, authors = fixture()
         data = normalize(repo, authors)

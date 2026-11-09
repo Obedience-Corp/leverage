@@ -1,45 +1,106 @@
-# leverage
+<h1 align="center">Festival Leverage Score</h1>
 
-An installable agent skill for Camp leverage reports, contributor tables and exact SVG charts. Point it at a local Git repository; no camp workspace or Festival plan is needed.
+<p align="center">Turn your Git history into a report you can share.</p>
 
-**Private preview.** This repository currently requires authorized GitHub access. The skill works with agent clients that load a standard `SKILL.md` directory. It bootstraps Festival when needed, then uses Camp's structured report output. Scoring stays in Camp; this package collects and presents its results.
+<p align="center">
+  <a href="https://github.com/Obedience-Corp/festival"><img src="https://img.shields.io/badge/built%20with-Festival-7c3aed.svg" alt="Built with Festival"></a>
+</p>
 
-![Synthetic contributor report](examples/report/assets/contributors.svg)
+<p align="center">
+  <a href="#get-started">Get started</a> ·
+  <a href="#read-the-score">Read the score</a> ·
+  <a href="examples/README.md">Explore the example</a> ·
+  <a href="reports/README.md">Real repository reports</a>
+</p>
 
-[Inspect the synthetic example](examples/README.md).
+Turn a local Git repository into a Festival Leverage Score report: an estimated effort ratio, contributor breakdown, and charts you can share. Ask your coding agent to run it, then open the report.
 
-[Browse real repository reports](reports/README.md): dated measurements of T3 Code, Crush, Codex, Gemini CLI and Aider, with charts, full contributor CSVs and source provenance.
+[Festival](https://github.com/Obedience-Corp/festival) provides the tools behind the score. Its Camp CLI runs the calculation through `camp leverage`, and this skill turns the output into a report. You can use it on an existing repository without setting up a camp workspace or a Festival plan.
 
-## Install the skill
+![Example contributor report with ownership shares and effort ratios](examples/report/assets/contributors.svg)
 
-Ask Codex's skill installer to install `skills/leverage` from this repository:
+*Example data, not a real team's results. [See the report and its inputs.](examples/README.md)*
+
+[Browse real repository reports](reports/README.md) for dated T3 Code, Crush, Codex, Gemini CLI and Aider measurements, including charts, full contributor CSVs and source provenance.
+
+## Get started
+
+This repository is currently a private preview; installation requires GitHub access.
+
+Ask your agent's skill installer:
 
 ```text
 Install the leverage skill from https://github.com/Obedience-Corp/leverage/tree/main/skills/leverage
 ```
 
-Alternatively clone the private repository and copy the self-contained directory into your client's skill location. For a user-level Codex install:
+Only `skills/leverage/` is installed. The synthetic examples, real repository reports, tests and archive-maintenance scripts stay in this repository; they are not copied into your installed skill. Some installers temporarily download the full repository before copying that directory.
+
+Then, from the repository you want to measure:
+
+```text
+Use leverage to calculate this repo's Festival Leverage Score
+and generate a visual contributor report.
+```
+
+You'll get a Markdown report, an SVG chart, a contributor CSV, snapshot metadata, and the original JSON exports. PNG is available when `rsvg-convert` is installed. Reports go into a new directory beside your repository. The skill leaves your source files alone and keeps the results local.
+
+You can also ask for a personal view or a different presentation:
+
+> Calculate my Festival Leverage Score for this repo using alice@example.com.
+
+> Render my saved report with the light theme.
+
+<details>
+<summary>Install manually in Codex or Claude Code</summary>
+
+Clone the repository and copy the skill into your client's skill directory:
 
 ```sh
 git clone git@github.com:Obedience-Corp/leverage.git
 mkdir -p ~/.codex/skills
-test ! -e ~/.codex/skills/leverage
-cp -R leverage/skills/leverage ~/.codex/skills/leverage
+if [ ! -e ~/.codex/skills/leverage ]; then
+  cp -R leverage/skills/leverage ~/.codex/skills/leverage
+fi
 ```
 
-For Claude Code's user-level skills, use `~/.claude/skills/leverage` as the destination. Keep an existing installation rather than copying over it blindly; update from a reviewed revision. An authorized GitHub skill installer can also pin a tag/commit. The skill directory contains all runtime resources; the source checkout is unnecessary after installation. Restart/reload the client's skill discovery if required.
+For Claude Code, use `~/.claude/skills` in place of `~/.codex/skills`. The copy above preserves an existing installation. To update, replace it with a reviewed revision. The skill directory contains everything needed at runtime; you can remove the source checkout afterward. Reload your client's skill discovery if needed.
 
-## Use it
+</details>
 
-Ask your agent:
+## Read the score
 
-> Use leverage on this repo and generate a visual contributor report.
+The Festival Leverage Score compares an estimate of the effort represented by the current code with an effort proxy based on Git history. It uses [scc](https://github.com/boyter/scc)'s COCOMO model for the estimate and calendar spans for the proxy. Repository and personal views record the effort basis they use.
 
-> Use leverage to calculate the personal view for alice@example.com.
+For contributors, estimated effort is allocated by their share of surviving physical lines, including comments and blanks. That allocation is divided by the repository-wide commit span, with a minimum of 0.1 months. A contributor with 8 estimated person-months of code and a 2-month span has a **4× ratio**.
 
-> Render my saved Camp JSON reports with the light theme.
+Read that as a model-based estimate. Git history cannot tell you how many hours someone worked, how good the software is, or whether they used AI. Short histories, imported code, and squash merges can affect the result. One repository only covers part of a person's work.
 
-The default bundle includes Markdown, the full contributor CSV, portable snapshot metadata, SVG and original raw captures. PNG is optional. Bars show physical-line ownership; ratio values remain a separate metric.
+The chart's bars show code ownership. Ratios are listed separately, and contributor ratios should never be added to get a repository score. [Read the measurement details.](skills/leverage/references/measurement.md)
+
+## Keep the evidence with the chart
+
+Each report includes the data behind it:
+
+| File | What it contains |
+| --- | --- |
+| `report.md` | Score, contributor table, method, and diagnostics |
+| `assets/contributors.svg` | Chart for a README, post, or presentation |
+| `data/contributors.csv` | Full contributor table for further analysis |
+| `data/snapshot.json` | Portable metadata and exact metrics |
+| `raw/` | Original exports and collection diagnostics |
+
+Check the report's scope and diagnostics before sharing a result. Raw exports contain original identities and local paths. Portable data omits emails and local paths but retains display names. Publishing is up to you.
+
+## Requirements
+
+You'll need Python 3.11+, Git, and scc. The skill installs missing Festival components when needed, verifies official release checksums, and reuses compatible installations. It preserves custom binaries and reports installs and updates.
+
+Automatic setup supports macOS and Linux; use WSL2 on Windows. PNG export also needs `rsvg-convert`. No API key or paid service is required to calculate or render a report.
+
+[Installation and troubleshooting](skills/leverage/references/installation.md) · [Output formats and partial reports](skills/leverage/references/output-contracts.md)
+
+<details>
+<summary>Run the scripts directly</summary>
 
 | Request | Mode | What it collects |
 | :--- | :--- | :--- |
@@ -49,42 +110,42 @@ The default bundle includes Markdown, the full contributor CSV, portable snapsho
 
 Personal and summary images show the selected ratio and effort proxy. Source counts, estimated repository effort and line accounting still describe the whole repository; their CSV is header-only. Personal selectors can match several identities, so inspect the matched count before comparing with one contributor row. Contributor rows represent surviving line owners, not everyone who ever committed.
 
-You can call the scripts directly:
-
 ```sh
+# Repository report with an optional PNG
 python3 skills/leverage/scripts/collect.py /path/to/repo --png
-python3 skills/leverage/scripts/collect.py /path/to/repo --mode personal --author alice@example.com
+
+# Personal view
+python3 skills/leverage/scripts/collect.py /path/to/repo \
+  --mode personal --author alice@example.com
+
+# Summary with an explicit team size
 python3 skills/leverage/scripts/collect.py /path/to/repo --mode summary --people 2
+
+# Restyle saved exports without rescanning
 python3 skills/leverage/scripts/render.py \
   --repository /path/to/summary.json --contributors /path/to/contributors.json \
   --output /path/to/new-report --theme light --sort ratio --png
 ```
 
-The default destination is a new sibling directory of the analyzed Git root. Use `--output` to choose another new directory outside that root. No source edits, camp creation, repository linking, commits or uploads occur. Use saved JSON to change styling without rescanning. Exit 2 means a partial report was written; inspect its diagnostics.
+Use `--output` to choose a new directory outside the source repository. Exit code 2 means a partial report was written; its diagnostics explain what's missing. Use `--camp /absolute/path` to supply an existing Camp executable and skip automatic setup after capability verification.
 
 After a default run, the saved inputs are `<report>/raw/repository.json` and `<report>/raw/contributors.json`. Pass those to `render.py` for another theme or sort order; it does not invoke Camp, Git, scc or the installer. Omit `--png` to render without any external commands. The table shows up to `--top` rows (10 by default), the SVG shows up to eight, and the CSV retains every collected row. Sorting by ratio keeps bar lengths tied to physical-line share.
 
 To rerender a personal report, use `--personal <report>/raw/personal.json`. For a summary-only report, use `--repository <report>/raw/repository.json` without `--contributors`. Use inputs from the same snapshot when combining files.
 
-## Dependencies and bootstrap
-
-Python 3.11+, Git and scc are required. Festival supplies Camp/Fest/the Festival manager; the skill's helper verifies official release checksums and installs missing components into a user directory. Compatible installations are reused, custom binaries are preserved, and package/manager ownership determines updates. It reports each install/update and returns the verified Camp executable path. No global shell-profile changes are made.
+To check dependencies without network requests or writes:
 
 ```sh
 bash skills/leverage/scripts/ensure-festival.sh --check
 ```
 
-Check mode makes no network requests or writes. macOS/Linux automatic bootstrap is supported; WSL2 is the Windows path for this version. Native Windows runtime support is not claimed. See [installation details](skills/leverage/references/installation.md). `--camp /absolute/path` lets an already-provisioned environment skip bootstrap after capability verification.
-
-`rsvg-convert` is optional for PNG. No image-generation API or paid service is required. See [measurement](skills/leverage/references/measurement.md) and [data contracts](skills/leverage/references/output-contracts.md) for the model, null/partial behavior and exported identity policy.
+</details>
 
 ## Development
 
 ```sh
-just test all   # deterministic install/render tests in a disposable container
-just test live  # actual verified Festival install and outside-camp Git workflow
+just test all   # deterministic tests in a disposable container
+just test live  # verified Festival install and a repo outside a camp
 ```
 
-Tests copy the installable directory and run as an unprivileged container user. Filesystem mutation/install tests refuse the host lane. Runtime scripts use Python's standard library; PyYAML is a test-only dependency for validating metadata. The Docker test image includes scc and a rasterizer. `examples/` uses synthetic data; `reports/` contains real measured snapshots with portable contributor data and explicit provenance. Neither belongs to the installable skill directory. Run `just reports check` to verify report hashes, CSV values, accounting and portable metadata.
-
-Nothing is published by invoking the skill. Raw JSON includes original identities/local paths; portable data omits them while retaining display names and exact metrics.
+Tests run against a copy of the installable skill as an unprivileged container user. Runtime Python uses the standard library; PyYAML is a test dependency. The test image includes scc and a PNG rasterizer. `examples/` uses synthetic data; `reports/` contains real measured snapshots. Both remain outside the installable skill. Run `just reports check` to verify archived report hashes, CSV values, accounting and provenance.
