@@ -1,0 +1,4 @@
+interface:
+  display_name: "Leverage"
+  short_description: "Repository scores and visual contributor reports"
+  default_prompt: "Use $leverage to analyze this Git repository and generate a visual contributor report."

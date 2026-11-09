@@ -1,0 +1,4 @@
+{
+  "dark": {"background":"#0b1522","panel":"#142438","text":"#edf4fa","muted":"#a5b6c7","grid":"#293b50","primary":"#5ee7cc","secondary":"#72aefa","excluded":"#f4b46a","uncommitted":"#ba9af6","unavailable":"#f28d97"},
+  "light": {"background":"#f7fafc","panel":"#e8eff5","text":"#142438","muted":"#4d6274","grid":"#cad6e0","primary":"#087d72","secondary":"#356ac1","excluded":"#a65d14","uncommitted":"#7751b4","unavailable":"#bc3e51"}
+}

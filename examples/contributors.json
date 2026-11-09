@@ -1,0 +1,82 @@
+{
+  "schema_version": "leverage-contributors/v1",
+  "method": "contributor_worktree_v1",
+  "status": "complete",
+  "generated_at": "2025-06-15T12:00:00Z",
+  "tools": {
+    "camp": "fixture"
+  },
+  "summary": {
+    "files": 2,
+    "lines": 1000,
+    "code_lines": 700,
+    "estimated_person_months": 10,
+    "attribution_coverage": 1,
+    "buckets": {
+      "contributors": {
+        "lines": 900,
+        "share": 0.9,
+        "estimated_person_months": 9
+      },
+      "excluded_identities": {
+        "lines": 0,
+        "share": 0,
+        "estimated_person_months": 0
+      },
+      "uncommitted": {
+        "lines": 100,
+        "share": 0.1,
+        "estimated_person_months": 1
+      },
+      "unavailable": {
+        "lines": 0,
+        "share": 0,
+        "estimated_person_months": 0
+      }
+    }
+  },
+  "diagnostics": [],
+  "projects": [
+    {
+      "target": "/work/example",
+      "git_root": "/work/example",
+      "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "manifest_digest": "scope",
+      "content_digest": "content",
+      "identity_digest": "identity",
+      "refs_digest": "refs",
+      "files": 2,
+      "lines": 1000,
+      "code_lines": 700,
+      "estimated_person_months": 10,
+      "config_sources": [],
+      "scan_arguments": []
+    }
+  ],
+  "display": {
+    "omitted_lines": 0,
+    "omitted_contributors": 0
+  },
+  "contributors": [
+    {
+      "id": "alice@private.test",
+      "name": "Alice",
+      "lines": 800,
+      "share": 0.8,
+      "estimated_person_months": 8,
+      "elapsed_person_months": 2,
+      "leverage": 4,
+      "history_complete": true
+    },
+    {
+      "id": "bob@private.test",
+      "name": "Bob",
+      "lines": 100,
+      "share": 0.1,
+      "estimated_person_months": 1,
+      "elapsed_person_months": 0.1,
+      "leverage": 10,
+      "history_complete": true
+    }
+  ]
+}
