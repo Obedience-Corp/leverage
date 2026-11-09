@@ -1,0 +1,82 @@
+{
+  "schema_version": "leverage-skill/v1",
+  "status": "complete",
+  "repository": "example",
+  "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "generated_at": "2025-06-15T12:00:00Z",
+  "tools": {
+    "camp": "fixture"
+  },
+  "manifest_digest": "scope",
+  "content_digest": "content",
+  "identity_digest": "identity",
+  "refs_digest": "refs",
+  "dirty": null,
+  "shallow": null,
+  "config_sources": [],
+  "excluded_directories": [],
+  "summary": {
+    "files": 2,
+    "lines": 1000,
+    "code_lines": 700,
+    "estimated_person_months": 10,
+    "attribution_coverage": 1,
+    "buckets": {
+      "contributors": {
+        "lines": 900,
+        "share": 0.9,
+        "estimated_person_months": 9
+      },
+      "excluded_identities": {
+        "lines": 0,
+        "share": 0,
+        "estimated_person_months": 0
+      },
+      "uncommitted": {
+        "lines": 100,
+        "share": 0.1,
+        "estimated_person_months": 1
+      },
+      "unavailable": {
+        "lines": 0,
+        "share": 0,
+        "estimated_person_months": 0
+      }
+    }
+  },
+  "contributors": [
+    {
+      "lines": 800,
+      "share": 0.8,
+      "estimated_person_months": 8,
+      "elapsed_person_months": 2,
+      "leverage": 4,
+      "row_id": "964e583f2346375e",
+      "name": "Alice",
+      "history_complete": true
+    },
+    {
+      "lines": 100,
+      "share": 0.1,
+      "estimated_person_months": 1,
+      "elapsed_person_months": 0.1,
+      "leverage": 10,
+      "row_id": "8d613ce889a1d408",
+      "name": "Bob",
+      "history_complete": true
+    }
+  ],
+  "contributors_collected": true,
+  "contributors_complete": true,
+  "omitted_contributors": 0,
+  "score": {
+    "full_leverage": 4,
+    "actual_person_months": 2.5,
+    "estimated_people": null,
+    "estimated_months": null
+  },
+  "view": "overview",
+  "effort_method": "fixture",
+  "matched_identities": null,
+  "diagnostic_codes": []
+}

@@ -1,0 +1,7 @@
+leverage
+Copyright 2026 Obedience Corp
+
+The Festival bootstrap workflow is informed by the Apache-2.0-licensed
+Obedience-Corp/fresh ensure-festival helper and Festival installer conventions.
+https://github.com/Obedience-Corp/fresh
+https://github.com/Obedience-Corp/festival

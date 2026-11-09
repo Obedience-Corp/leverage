@@ -1,0 +1,13 @@
+name: test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  isolated-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build isolated runtime
+        run: docker build -t leverage-tests -f tests/Dockerfile .
+      - name: Test installed skill copy without network
+        run: docker run --rm --network none -v "$PWD:/src:ro" leverage-tests python3 tests/test_skill.py

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+<title id="title">example leverage report: complete</title>
+<desc id="desc">Sorted by ownership. Bars encode physical-line share, not model ratio. 2 rows collected; null ratios are unavailable. Status complete.</desc>
+<rect width="1200" height="750" rx="24" fill="#0b1522"/>
+<text x="52" y="48" font-family="Arial,sans-serif" font-size="14" fill="#5ee7cc" text-anchor="start">CAMP / REPOSITORY LEVERAGE</text>
+<text x="52" y="100" font-family="Arial,sans-serif" font-size="34" fill="#edf4fa" text-anchor="start">example</text>
+<text x="1148" y="48" font-family="Arial,sans-serif" font-size="14" fill="#a5b6c7" text-anchor="end">2025-06-15</text>
+<text x="1148" y="78" font-family="Arial,sans-serif" font-size="14" fill="#a5b6c7" text-anchor="end">aaaaaaaaaaaa</text>
+<text x="52" y="137" font-family="Arial,sans-serif" font-size="18" fill="#a5b6c7" text-anchor="start">COMPLETE · overview view · calendar-span effort proxy</text>
+<rect x="52.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
+<text x="76" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">700</text>
+<text x="76" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">COUNTED CODE LINES</text>
+<rect x="425.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
+<text x="449" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">2</text>
+<text x="449" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">CONTRIBUTOR ROWS</text>
+<rect x="798.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
+<text x="822" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">10.0</text>
+<text x="822" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">ESTIMATED PERSON-MONTHS</text>
+<text x="52" y="329" font-family="Arial,sans-serif" font-size="24" fill="#edf4fa" text-anchor="start">Contributors sorted by line ownership</text>
+<text x="52" y="357" font-family="Arial,sans-serif" font-size="16" fill="#a5b6c7" text-anchor="start">Bar length is share of all counted physical lines. Ratios are a separate metric.</text>
+<text x="52" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">CONTRIBUTOR</text>
+<text x="940" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="end">SHARE</text>
+<text x="1148" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="end">MODEL RATIO</text>
+<rect x="304.00" y="414.00" width="1.00" height="116" rx="0" fill="#293b50"/>
+<text x="304.0" y="552" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">0.0%</text>
+<rect x="439.00" y="414.00" width="1.00" height="116" rx="0" fill="#293b50"/>
+<text x="439.0" y="552" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">20.0%</text>
+<rect x="574.00" y="414.00" width="1.00" height="116" rx="0" fill="#293b50"/>
+<text x="574.0" y="552" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">40.0%</text>
+<rect x="709.00" y="414.00" width="1.00" height="116" rx="0" fill="#293b50"/>
+<text x="709.0" y="552" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">60.0%</text>
+<rect x="844.00" y="414.00" width="1.00" height="116" rx="0" fill="#293b50"/>
+<text x="844.0" y="552" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="middle">80.0%</text>
+<text x="52" y="448" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Alice</text>
+<rect x="304.00" y="428.00" width="540.00" height="26" rx="4" fill="#5ee7cc"/>
+<text x="940" y="448" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">80.00%</text>
+<text x="1148" y="448" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">4.00x</text>
+<text x="52" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="start">Bob</text>
+<rect x="304.00" y="478.00" width="67.50" height="26" rx="4" fill="#72aefa"/>
+<text x="940" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">10.00%</text>
+<text x="1148" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">10.00x</text>
+<rect x="52.00" y="588.00" width="1096.00" height="106" rx="14" fill="#142438"/>
+<text x="76" y="617" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">LINE ACCOUNTING</text>
+<rect x="76.00" y="630.00" width="943.20" height="14" rx="0" fill="#5ee7cc"/>
+<rect x="1019.20" y="630.00" width="0.00" height="14" rx="0" fill="#f4b46a"/>
+<rect x="1019.20" y="630.00" width="104.80" height="14" rx="0" fill="#ba9af6"/>
+<rect x="1124.00" y="630.00" width="0.00" height="14" rx="0" fill="#f28d97"/>
+<text x="76" y="672" font-family="Arial,sans-serif" font-size="13" fill="#5ee7cc" text-anchor="start">Eligible contributors 90.00%</text>
+<text x="346" y="672" font-family="Arial,sans-serif" font-size="13" fill="#f4b46a" text-anchor="start">Excluded identities 0.00%</text>
+<text x="616" y="672" font-family="Arial,sans-serif" font-size="13" fill="#ba9af6" text-anchor="start">Uncommitted 10.00%</text>
+<text x="886" y="672" font-family="Arial,sans-serif" font-size="13" fill="#f28d97" text-anchor="start">Unavailable 0.00%</text>
+<text x="52" y="725" font-family="Arial,sans-serif" font-size="14" fill="#a5b6c7" text-anchor="start">Estimated effort / calendar span. Not hours worked or proof of AI use. See report.md for scope and diagnostics.</text>
+</svg>

@@ -1,0 +1,3 @@
+row_id,name,lines,share,estimated_person_months,elapsed_person_months,leverage,history_complete
+964e583f2346375e,Alice,800,0.8,8,2,4,True
+8d613ce889a1d408,Bob,100,0.1,1,0.1,10,True
