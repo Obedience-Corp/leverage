@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
 <title id="title">example leverage report: complete</title>
-<desc id="desc">Sorted by ownership. Bars encode physical-line share, not model ratio. 2 rows collected; null ratios are unavailable. Status complete.</desc>
+<desc id="desc">Sorted by ownership. Bars encode physical-line share, not model ratio. 2 rows collected. Null ratios are unavailable. Status complete.</desc>
 <rect width="1200" height="750" rx="24" fill="#0b1522"/>
 <text x="52" y="48" font-family="Arial,sans-serif" font-size="14" fill="#5ee7cc" text-anchor="start">CAMP / REPOSITORY LEVERAGE</text>
 <text x="52" y="100" font-family="Arial,sans-serif" font-size="34" fill="#edf4fa" text-anchor="start">example</text>
@@ -9,13 +9,13 @@
 <text x="52" y="137" font-family="Arial,sans-serif" font-size="18" fill="#a5b6c7" text-anchor="start">COMPLETE · overview view · calendar-span effort proxy</text>
 <rect x="52.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
 <text x="76" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">700</text>
-<text x="76" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">COUNTED CODE LINES</text>
+<text x="76" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">REPOSITORY CODE LINES</text>
 <rect x="425.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
 <text x="449" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">2</text>
 <text x="449" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">CONTRIBUTOR ROWS</text>
 <rect x="798.00" y="173.00" width="350.00" height="112" rx="14" fill="#142438"/>
 <text x="822" y="219" font-family="Arial,sans-serif" font-size="30" fill="#edf4fa" text-anchor="start">10.0</text>
-<text x="822" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">ESTIMATED PERSON-MONTHS</text>
+<text x="822" y="257" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">REPOSITORY ESTIMATED PM</text>
 <text x="52" y="329" font-family="Arial,sans-serif" font-size="24" fill="#edf4fa" text-anchor="start">Contributors sorted by line ownership</text>
 <text x="52" y="357" font-family="Arial,sans-serif" font-size="16" fill="#a5b6c7" text-anchor="start">Bar length is share of all counted physical lines. Ratios are a separate metric.</text>
 <text x="52" y="397" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">CONTRIBUTOR</text>
@@ -40,7 +40,7 @@
 <text x="940" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">10.00%</text>
 <text x="1148" y="498" font-family="Arial,sans-serif" font-size="17" fill="#edf4fa" text-anchor="end">10.00x</text>
 <rect x="52.00" y="588.00" width="1096.00" height="106" rx="14" fill="#142438"/>
-<text x="76" y="617" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">LINE ACCOUNTING</text>
+<text x="76" y="617" font-family="Arial,sans-serif" font-size="12" fill="#a5b6c7" text-anchor="start">REPOSITORY LINE ACCOUNTING</text>
 <rect x="76.00" y="630.00" width="943.20" height="14" rx="0" fill="#5ee7cc"/>
 <rect x="1019.20" y="630.00" width="0.00" height="14" rx="0" fill="#f4b46a"/>
 <rect x="1019.20" y="630.00" width="104.80" height="14" rx="0" fill="#ba9af6"/>

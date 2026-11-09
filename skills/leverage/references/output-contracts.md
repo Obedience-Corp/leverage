@@ -8,6 +8,8 @@ Exit 0 is complete or empty. Exit 2 means a valid partial bundle was produced. M
 
 Bundle: `report.md`, `assets/contributors.svg`, optional `assets/contributors.png`, `data/contributors.csv`, `data/snapshot.json`. Collection additionally writes original JSON exports, per-command stderr, `raw/diagnostics.txt` and `raw/collection.json`. Render-only mode writes no raw files and performs no scan/bootstrap.
 
+Summary and personal collection do not include contributor rows. Their CSV is header-only, and their SVG presents the selected ratio and effort proxy without contributor axes. Repository source totals, estimated effort and accounting retain repository scope in every view. Overview collects both a summary and threshold-zero contributor export. Its Markdown table respects `--top`, its SVG shows up to eight rows, and its CSV retains all collected rows.
+
 Portable schema `leverage-skill/v1` keeps display names, source times/revision, tool versions, fingerprints, accounting, selected score and effort method, nullable row metrics, omitted counts and diagnostic codes. Local paths/email IDs are omitted; row IDs are stable truncated hashes of original IDs, not a guarantee of anonymity. Raw exports still contain original identities/paths. CSV escapes leading spreadsheet formula markers in names; numeric fields retain source precision.
 
 Use a new output directory outside the source Git root. Existing render inputs can be reused for a new theme/top-N without rescoring. SVG bars encode line share on a zero-based linear axis; ratios are separately labeled. Default ordering is ownership. PNG converts the SVG using rsvg-convert and never invents or estimates chart data.

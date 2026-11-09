@@ -205,7 +205,50 @@ class ReportTests(unittest.TestCase):
                                     'buckets': {key: {'lines': 0, 'share': 0, 'estimated_person_months': 0} for key in render.BUCKETS}}
         repo['report']['scope'].update(files=0, lines=0, code_lines=0, estimated_person_months=0)
         empty = normalize(repository=repo)
-        self.assertIn('No contributor rows collected', render.figure(empty, json.loads((SKILL/'assets/theme.json').read_text())['dark'], 'ownership', 10))
+        self.assertIn('EMPTY', render.figure(empty, json.loads((SKILL/'assets/theme.json').read_text())['dark'], 'ownership', 10))
+
+    def test_score_only_views_display_selected_score_without_contributor_axes(self):
+        import xml.etree.ElementTree as ET
+        theme = json.loads((SKILL/'assets/theme.json').read_text())['dark']
+        repo, _ = fixture()
+        personal = copy.deepcopy(repo)
+        personal['report']['matched_author_ids'] = ['alice@private.test']
+        for data in (normalize(repository=repo), normalize(personal=personal)):
+            for score in (4, None):
+                data['score']['full_leverage'] = score
+                svg = render.figure(data, theme, 'ownership', 10)
+                texts = [node.text for node in ET.fromstring(svg).findall('{http://www.w3.org/2000/svg}text')]
+                self.assertIn('4.00x' if score else 'unavailable', texts)
+                self.assertIn('Effort proxy: 2.50 person-months', texts)
+                self.assertIn('10.0', texts)  # Repository estimate stays separate from the selected score.
+                self.assertNotIn('SHARE', texts)
+                self.assertNotIn('MODEL RATIO', texts)
+                if data['view'] == 'personal':
+                    self.assertIn('Matched author identities: 1', texts)
+                self.assertNotIn('| Contributor |', render.markdown(data, 'ownership', 10))
+
+    def test_offline_restyle_preserves_all_measurements_without_external_commands(self):
+        import csv
+        repo, authors = fixture()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            for name, source in (('repository', repo), ('contributors', authors)):
+                (root/f'{name}.json').write_text(json.dumps(source))
+            render.write_bundle(normalize(repo, authors), root/'original')
+            result = subprocess.run([
+                sys.executable, str(SKILL/'scripts/render.py'),
+                '--repository', str(root/'repository.json'), '--contributors', str(root/'contributors.json'),
+                '--output', str(root/'light'), '--theme', 'light', '--sort', 'ratio',
+            ], env={**os.environ, 'PATH': str(root/'no-tools')}, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual((root/'original/data/snapshot.json').read_bytes(), (root/'light/data/snapshot.json').read_bytes())
+            def rows(name):
+                with (root/name/'data/contributors.csv').open() as stream:
+                    return list(csv.DictReader(stream))
+            original, light = rows('original'), rows('light')
+            self.assertEqual([r['name'] for r in light], ['Bob', 'Alice'])
+            self.assertEqual(sorted(original, key=lambda r: r['row_id']), sorted(light, key=lambda r: r['row_id']))
+            self.assertFalse((root/'light/raw').exists())
 
     def test_table_csv_svg_and_png_from_installed_copy(self):
         repo, authors = fixture()

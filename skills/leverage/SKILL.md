@@ -19,6 +19,8 @@ The default collects a repository summary and full contributor breakdown, then w
 
 Select `--mode summary` for only repository scoring, or `--mode personal --author EMAIL` for an author selection. `--people N` overrides summary team size. `--top N`, `--sort ownership|ratio` and `--theme dark|light` control presentation; raw rows remain complete. Prefer ownership order unless the user asks otherwise. Personal selectors can match several identities; report that count.
 
+Summary and personal modes show the selected score without collecting contributor rows; their CSV is header-only. Repository totals/accounting still cover the whole source tree. Use the default overview when the user wants contributor comparisons. Tables show up to `--top` rows; the SVG shows up to eight; CSV includes all collected rows.
+
 Collection bootstraps Festival when needed via `scripts/ensure-festival.sh`. Show its stderr install/update notices to the user. It verifies checksums, preserves unmanaged tools, returns the verified Camp path and does not create a camp or link the repo. Use [installation.md](references/installation.md) for missing dependencies or ownership/platform failures. To inspect without installing, run `bash "<skill-dir>/scripts/ensure-festival.sh" --check`. An explicitly supplied `--camp /absolute/path` skips bootstrap after a capability check.
 
 Git, Python 3.11+ and scc are required; provide the relevant missing-tool instruction or perform an already-authorized install. Do not install another Python distribution as a side effect. No API key or image-generation model is needed.
@@ -34,6 +36,8 @@ python3 "<skill-dir>/scripts/render.py" \
 ```
 
 Use `--personal` for a saved personal report. A new theme/top-N uses saved data. Supplied snapshots must match; do not join incompatible runs. See [output-contracts.md](references/output-contracts.md) for schema and partial/empty data behavior.
+
+For a default collected bundle, use `raw/repository.json` and `raw/contributors.json` as inputs. Personal bundles use `raw/personal.json`. Render-only mode does not invoke Camp, Git, scc or bootstrap; omit `--png` when no external commands are available.
 
 ## Interpret and deliver
 
