@@ -1,4 +1,4 @@
-<h1 align="center">Festival Leverage Score</h1>
+<h1 align="center">leverage</h1>
 
 <p align="center">Turn your Git history into a report you can share.</p>
 
@@ -13,9 +13,9 @@
   <a href="reports/README.md">Real repository reports</a>
 </p>
 
-Turn a local Git repository into a Festival Leverage Score report: an estimated effort ratio, contributor breakdown, and charts you can share. Ask your coding agent to run it, then open the report.
+Calculate a leverage score for any local Git repository and see the estimated effort behind the code, who owns it, and how that compares with its history. This agent skill gives you a report with contributor breakdowns and charts you can share.
 
-[Festival](https://github.com/Obedience-Corp/festival) provides the tools behind the score. Its Camp CLI runs the calculation through `camp leverage`, and this skill turns the output into a report. You can use it on an existing repository without setting up a camp workspace or a Festival plan.
+Install the skill, point your coding agent at a repo, and ask for a report. It works with your existing checkout; no workspace setup or project migration is needed.
 
 ![Example contributor report with ownership shares and effort ratios](examples/report/assets/contributors.svg)
 
@@ -38,15 +38,14 @@ Only `skills/leverage/` is installed. The synthetic examples, real repository re
 Then, from the repository you want to measure:
 
 ```text
-Use leverage to calculate this repo's Festival Leverage Score
-and generate a visual contributor report.
+Use leverage to score this repo and generate a visual contributor report.
 ```
 
 You'll get a Markdown report, an SVG chart, a contributor CSV, snapshot metadata, and the original JSON exports. PNG is available when `rsvg-convert` is installed. Reports go into a new directory beside your repository. The skill leaves your source files alone and keeps the results local.
 
 You can also ask for a personal view or a different presentation:
 
-> Calculate my Festival Leverage Score for this repo using alice@example.com.
+> Use leverage to calculate my score for this repo using alice@example.com.
 
 > Render my saved report with the light theme.
 
@@ -69,7 +68,7 @@ For Claude Code, use `~/.claude/skills` in place of `~/.codex/skills`. The copy 
 
 ## Read the score
 
-The Festival Leverage Score compares an estimate of the effort represented by the current code with an effort proxy based on Git history. It uses [scc](https://github.com/boyter/scc)'s COCOMO model for the estimate and calendar spans for the proxy. Repository and personal views record the effort basis they use.
+The leverage score compares an estimate of the effort represented by the current code with an effort proxy based on Git history. It uses [scc](https://github.com/boyter/scc)'s COCOMO model for the estimate and calendar spans for the proxy. Repository and personal views record the effort basis they use. The underlying metric is the [Festival Leverage Score](https://github.com/Obedience-Corp/festival), calculated by `camp leverage`.
 
 For contributors, estimated effort is allocated by their share of surviving physical lines, including comments and blanks. That allocation is divided by the repository-wide commit span, with a minimum of 0.1 months. A contributor with 8 estimated person-months of code and a 2-month span has a **4× ratio**.
 
