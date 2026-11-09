@@ -31,10 +31,13 @@ def ordered(data, sort):
 
 def figure(data, theme, sort, top):
     rows = ordered(data, sort)[:min(top, 8)]
-    height = 650 + 50 * max(1, len(rows))
+    collected = data['contributors_collected']
+    height = 650 + (50 * max(1, len(rows)) if collected else 0)
+    description = (f"Sorted by {sort}. Bars encode physical-line share, not model ratio. {len(data['contributors'])} rows collected."
+                   if collected else f"{data['view'].capitalize()} score. Contributor rows were not collected; source totals and accounting cover the repository.")
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">',
              '<title id="title">' + html.escape(data['repository'] + ' leverage report: ' + data['status']) + '</title>',
-             '<desc id="desc">' + html.escape(f"Sorted by {sort}. Bars encode physical-line share, not model ratio. {len(data['contributors'])} rows collected; null ratios are unavailable. Status {data['status']}.") + '</desc>',
+             '<desc id="desc">' + html.escape(f"{description} Null ratios are unavailable. Status {data['status']}.") + '</desc>',
              f'<rect width="1200" height="{height}" rx="24" fill="{theme["background"]}"/>']
 
     def text(x, y, value, size=18, color='text', anchor='start'):
@@ -50,29 +53,41 @@ def figure(data, theme, sort, top):
     text(1148, 78, (data['revision'] or 'unborn')[:12], 14, 'muted', 'end')
     text(52, 137, f"{data['status'].upper()} · {data['view']} view · calendar-span effort proxy", 18, 'muted')
     summary = data['summary']
-    cards = [(f"{summary['code_lines']:,}", 'COUNTED CODE LINES'),
-             (str(len(data['contributors'])) if data['contributors_collected'] else 'not collected', 'CONTRIBUTOR ROWS'),
-             (fmt(summary['estimated_person_months'], 1), 'ESTIMATED PERSON-MONTHS')]
+    score = data['score']
+    score_label = 'Personal' if data['view'] == 'personal' else 'Repository'
+    middle = ((str(len(data['contributors'])), 'CONTRIBUTOR ROWS') if collected else
+              (fmt(score['full_leverage'], suffix='x'), score_label.upper() + ' RATIO'))
+    cards = [(f"{summary['code_lines']:,}", 'REPOSITORY CODE LINES'), middle,
+             (fmt(summary['estimated_person_months'], 1), 'REPOSITORY ESTIMATED PM')]
     for x, (value, label) in zip((52, 425, 798), cards):
         rect(x, 173, 350, 112, 'panel', 14)
         text(x + 24, 219, value, 30)
         text(x + 24, 257, label, 12, 'muted')
-    text(52, 329, f"Contributors sorted by {'line ownership' if sort == 'ownership' else 'model ratio'}", 24)
-    text(52, 357, 'Bar length is share of all counted physical lines. Ratios are a separate metric.', 16, 'muted')
-    text(52, 397, 'CONTRIBUTOR', 12, 'muted')
-    text(940, 397, 'SHARE', 12, 'muted', 'end')
-    text(1148, 397, 'MODEL RATIO', 12, 'muted', 'end')
     maximum = max((r['share'] for r in rows), default=0)
     axis = min(1, max(.1, math.ceil(maximum * 10) / 10))
-    bottom = 430 + 50 * max(1, len(rows))
-    for tick in range(5):
-        x = 304 + tick * 540 / 4
-        rect(x, 414, 1, bottom - 414, 'grid')
-        text(x, bottom + 22, f'{axis * tick / 4:.1%}', 12, 'muted', 'middle')
-    if not rows:
-        text(52, 448, 'No contributor rows collected' if not data['contributors_collected'] else 'No surviving attributable lines', 18, 'muted')
-        if data['score']:
-            text(52, 475, 'Selected score: ' + fmt(data['score']['full_leverage'], suffix='x'), 18)
+    bottom = 430
+    if collected:
+        bottom += 50 * max(1, len(rows))
+        text(52, 329, f"Contributors sorted by {'line ownership' if sort == 'ownership' else 'model ratio'}", 24)
+        text(52, 357, 'Bar length is share of all counted physical lines. Ratios are a separate metric.', 16, 'muted')
+        text(52, 397, 'CONTRIBUTOR', 12, 'muted')
+        text(940, 397, 'SHARE', 12, 'muted', 'end')
+        text(1148, 397, 'MODEL RATIO', 12, 'muted', 'end')
+        if rows:
+            for tick in range(5):
+                x = 304 + tick * 540 / 4
+                rect(x, 414, 1, bottom - 414, 'grid')
+                text(x, bottom + 22, f'{axis * tick / 4:.1%}', 12, 'muted', 'middle')
+        else:
+            text(52, 448, 'No surviving attributable lines', 18, 'muted')
+    else:
+        text(52, 329, score_label + ' score details', 24)
+        text(52, 367, 'Effort proxy: ' + fmt(score['actual_person_months']) + ' person-months', 20)
+        if data['matched_identities'] is not None:
+            text(52, 399, f"Matched author identities: {data['matched_identities']}", 18, 'muted')
+        else:
+            text(52, 399, 'Read report.md for the recorded effort basis.', 18, 'muted')
+        text(52, 431, 'Contributor rows were not collected. Source totals and accounting cover the repository.', 16, 'muted')
     for i, row in enumerate(rows):
         y = 445 + 50 * i
         name = row['name']
@@ -82,7 +97,7 @@ def figure(data, theme, sort, top):
         text(1148, y + 3, fmt(row['leverage'], suffix='x'), 17, anchor='end')
     panel = bottom + 58
     rect(52, panel, 1096, 106, 'panel', 14)
-    text(76, panel + 29, 'LINE ACCOUNTING', 12, 'muted')
+    text(76, panel + 29, 'REPOSITORY LINE ACCOUNTING', 12, 'muted')
     x = 76
     colors = ['primary', 'excluded', 'uncommitted', 'unavailable']
     for key, color in zip(BUCKETS, colors):
@@ -104,19 +119,21 @@ def markdown(data, sort, top):
              '![Repository leverage and contributor ownership](assets/contributors.svg)', '',
              '| Measurement | Result |', '| :--- | ---: |',
              f"| Files | {s['files']:,} |", f"| Code lines | {s['code_lines']:,} |",
-             f"| Physical lines | {s['lines']:,} |", f"| Estimated effort (PM) | {fmt(s['estimated_person_months'])} |"]
+             f"| Physical lines | {s['lines']:,} |", f"| Repository estimated effort (PM) | {fmt(s['estimated_person_months'])} |"]
     if data['score']:
         lines += [f"| {'Personal' if data['view']=='personal' else 'Repository'} ratio | {fmt(data['score']['full_leverage'], suffix='x')} |",
+                  f"| Selected effort proxy (PM) | {fmt(data['score']['actual_person_months'])} |",
                   f"| Effort basis | {mdtext(data['effort_method'])} |"]
     if data['matched_identities'] is not None:
         lines += [f"| Matched author identities | {data['matched_identities']} |"]
-    lines += ['', '## Contributors', '', f"Sort: {sort}. Showing up to {top} of {len(data['contributors'])} collected rows.", '',
-              '| Contributor | Physical lines | Share | Est. PM | Span PM | Ratio |',
-              '| :--- | ---: | ---: | ---: | ---: | ---: |']
-    for row in ordered(data, sort)[:top]:
-        lines.append(f"| {mdtext(row['name'])} | {row['lines']:,} | {row['share']:.2%} | {fmt(row['estimated_person_months'])} | {fmt(row['elapsed_person_months'])} | {fmt(row['leverage'], suffix='x')} |")
+    if data['contributors_collected']:
+        lines += ['', '## Contributors', '', f"Sort: {sort}. Showing up to {top} of {len(data['contributors'])} collected rows.", '',
+                  '| Contributor | Physical lines | Share | Est. PM | Span PM | Ratio |',
+                  '| :--- | ---: | ---: | ---: | ---: | ---: |']
+        for row in ordered(data, sort)[:top]:
+            lines.append(f"| {mdtext(row['name'])} | {row['lines']:,} | {row['share']:.2%} | {fmt(row['estimated_person_months'])} | {fmt(row['elapsed_person_months'])} | {fmt(row['leverage'], suffix='x')} |")
     if not data['contributors_collected']:
-        lines += ['', 'Contributor data was not collected for this view.']
+        lines += ['', 'Contributor rows were not collected for this view; the CSV contains its header only. Source totals and line accounting cover the whole repository. Use overview mode for a contributor breakdown.']
     elif not data['contributors_complete']:
         lines += ['', f"Input was filtered: {data['omitted_contributors']} contributor rows were omitted by Camp. CSV contains the collected rows only."]
     lines += ['', '[Contributor CSV](data/contributors.csv) · [Snapshot metadata](data/snapshot.json)', '',

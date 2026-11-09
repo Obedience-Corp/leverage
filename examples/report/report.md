@@ -9,8 +9,9 @@
 | Files | 2 |
 | Code lines | 700 |
 | Physical lines | 1,000 |
-| Estimated effort (PM) | 10.00 |
+| Repository estimated effort (PM) | 10.00 |
 | Repository ratio | 4.00x |
+| Selected effort proxy (PM) | 2.50 |
 | Effort basis | fixture |
 
 ## Contributors
