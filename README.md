@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#get-started">Get started</a> ·
   <a href="#read-the-score">Read the score</a> ·
-  <a href="examples/README.md">Explore the example</a> ·
+  <a href="reports/t3code/2026-11-09-25bf84ab07f5/report.md">Read the T3 Code report</a> ·
   <a href="reports/README.md">Real repository reports</a>
 </p>
 
@@ -17,9 +17,9 @@ Calculate a leverage score for any local Git repository and see the estimated ef
 
 Install the skill, point your coding agent at a repo, and ask for a report. It works with your existing checkout; no workspace setup or project migration is needed.
 
-![Example contributor report with ownership shares and effort ratios](examples/report/assets/contributors.svg)
+![Real T3 Code report showing the largest surviving line owners, their model ratios and line accounting](reports/t3code/2026-11-09-25bf84ab07f5/assets/contributors.svg)
 
-*Example data, not a real team's results. [See the report and its inputs.](examples/README.md)*
+*T3 Code, measured November 9, 2026 at revision `25bf84ab07f5` (source commit: November 7). [Full report](reports/t3code/2026-11-09-25bf84ab07f5/report.md) · [All 416 contributor rows](reports/t3code/2026-11-09-25bf84ab07f5/data/contributors.csv) · [Scope and provenance](reports/t3code/2026-11-09-25bf84ab07f5/README.md).*
 
 [Browse real repository reports](reports/README.md) for dated T3 Code, Crush, Codex, Gemini CLI and Aider measurements, including charts, full contributor CSVs and source provenance.
 
@@ -147,4 +147,4 @@ just test all   # deterministic tests in a disposable container
 just test live  # verified Festival install and a repo outside a camp
 ```
 
-Tests run against a copy of the installable skill as an unprivileged container user. Runtime Python uses the standard library; PyYAML is a test dependency. The test image includes scc and a PNG rasterizer. `examples/` uses synthetic data; `reports/` contains real measured snapshots. Both remain outside the installable skill. Run `just reports check` to verify archived report hashes, CSV values, accounting and provenance.
+Tests run against a copy of the installable skill as an unprivileged container user. Runtime Python uses the standard library; PyYAML is a test dependency. The test image includes scc and a PNG rasterizer. [`examples/`](examples/README.md) contains the synthetic test fixture; `reports/` contains real measured snapshots. Both remain outside the installable skill. Run `just reports check` to verify archived report hashes, CSV values, accounting and provenance.
