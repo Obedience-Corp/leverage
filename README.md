@@ -25,7 +25,7 @@ Install the skill, point your coding agent at a repo, and ask for a report. It w
 
 ## Get started
 
-This repository is currently a private preview; installation requires GitHub access.
+The skill is public. You can install it without a GitHub account or access token.
 
 Ask your agent's skill installer:
 
@@ -55,7 +55,7 @@ You can also ask for a personal view or a different presentation:
 Clone the repository and copy the skill into your client's skill directory:
 
 ```sh
-git clone git@github.com:Obedience-Corp/leverage.git
+git clone https://github.com/Obedience-Corp/leverage.git
 mkdir -p ~/.codex/skills
 if [ ! -e ~/.codex/skills/leverage ]; then
   cp -R leverage/skills/leverage ~/.codex/skills/leverage
